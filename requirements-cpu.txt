@@ -1,0 +1,4 @@
+# Environment versions exercised during local CPU validation.
+# Install PyTorch from the appropriate CPU/CUDA index for your platform.
+numpy==2.3.5
+torch==2.10.0

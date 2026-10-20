@@ -1,0 +1,30 @@
+[
+  {
+    "path": "reproduction/compact/replay.py",
+    "upstream_path": "reproduction/scientific/replay.py",
+    "git_blob": "1f021b087146fbb6633b4003f195490c504da20f",
+    "sha256": "9f8f3c27265c7d6b066a193a68924fecb3ba72ef45587c526ec43bcbd8b7507d",
+    "status": "byte-identical to inspected upstream"
+  },
+  {
+    "path": "reproduction/compact/research/energy_residual_v142.py",
+    "upstream_path": "reproduction/scientific/research/energy_residual_v142.py",
+    "git_blob": "2441c12c4072fea4301cd6c0a84dadaea89d8adb",
+    "sha256": "a8160fdbbc49f091380bec1f8e25ce25a2660734de61e09342c0958998a2af48",
+    "status": "byte-identical to inspected upstream"
+  },
+  {
+    "path": "reproduction/compact/research/structured_energy_v118.py",
+    "upstream_path": "reproduction/scientific/research/structured_energy_v118.py",
+    "git_blob": "7758282c3469a3a6203af5c14cdeac00ac0e4522",
+    "sha256": "448e196f181dfa0ae012a7a062ec08dc3d2cb67310b2cbdb0e81ffafcf36f80e",
+    "status": "byte-identical to inspected upstream"
+  },
+  {
+    "path": "reproduction/compact/research/structured_energy_v126_portable.py",
+    "upstream_path": "reproduction/scientific/research/structured_energy_v126_portable.py",
+    "git_blob": "b62be1bd81e00ec6832254be1ee532ba6ce5a32f",
+    "sha256": "97e04031bc944c3020d58c5ddbd05f01f113973d00799042009b134edb5263aa",
+    "status": "byte-identical to inspected upstream"
+  }
+]

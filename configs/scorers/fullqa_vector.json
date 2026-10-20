@@ -1,0 +1,24 @@
+{
+  "architecture": {
+    "family": "fullqa_vector",
+    "dim": 2560,
+    "views": 32,
+    "rank": 16,
+    "hidden": 32,
+    "shots": 4,
+    "window": 2,
+    "start_mode": "encoded_system_full_qa"
+  },
+  "training": {
+    "seed": 20261020,
+    "epochs": 40,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "patience": 5,
+    "rank_weight": 0.5,
+    "success_weight": 1.0,
+    "pair_mode": "reference",
+    "gradient_clip": 1.0,
+    "device": "cpu"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "title": "Selected reproducible development-cohort comparisons",
+  "target": "Qwen3.5-4B",
+  "thinking": false,
+  "shots": 4,
+  "bootstrap": {
+    "seed": 20261020,
+    "replicates": 5000,
+    "confidence": 0.95,
+    "unit": "question",
+    "role": "descriptive paired resampling conditional on the selected cohort; not selection-adjusted"
+  },
+  "comparisons": [
+    {
+      "id": "gpqa-one-vs-raw",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "Raw_one_call",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random prompt, 1 call"
+    },
+    {
+      "id": "gpqa-one-vs-mv2",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "Raw_MV2",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random-path MV2"
+    },
+    {
+      "id": "gpqa-sc3-vs-mv3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "Raw_MV3",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-path MV3"
+    },
+    {
+      "id": "gpqa-sc3-vs-mv4",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "Raw_MV4",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-path MV4"
+    },
+    {
+      "id": "gpqa-sc3-vs-mv8",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "Raw_MV8",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-path MV8"
+    },
+    {
+      "id": "mmlu-sc3-vs-retrieval",
+      "cohort": "mmlu32_v160",
+      "maze_arm": "learned_best_SC3",
+      "baseline_arm": "retrieval_SC3",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Retrieval SC3"
+    },
+    {
+      "id": "mmlu-sc3-vs-random",
+      "cohort": "mmlu32_v160",
+      "maze_arm": "learned_best_SC3",
+      "baseline_arm": "uniform_fixed_Raw_SC3",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-prompt SC3"
+    }
+  ]
+}

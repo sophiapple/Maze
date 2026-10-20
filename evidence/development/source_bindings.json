@@ -1,0 +1,16 @@
+[
+  {
+    "cohort": "gpqa99_v206",
+    "remote_path": "cache/gpqa_registered_analysis_v206/policy_decisions_private.json",
+    "sha256": "ec984e4eab296e45b5193ce0b37a1a757b197296c210507c0c343c52c8b9a7e6",
+    "source_bytes": 647524,
+    "export": "numeric outcome/cost allowlist; question IDs replaced by sorted ordinal"
+  },
+  {
+    "cohort": "mmlu32_v160",
+    "remote_path": "reports/mmlu_repeat_selected_v160/question_metrics.json",
+    "sha256": "606fd08e055bbf3e929e043296b303ff3c6ba991eb67cd7713f138511817ed21",
+    "source_bytes": 26464,
+    "export": "numeric outcome/cost allowlist; question IDs replaced by sorted ordinal"
+  }
+]

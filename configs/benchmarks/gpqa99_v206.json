@@ -1,0 +1,12 @@
+{
+  "cohort": "gpqa99_v206",
+  "display": "GPQA Diamond99",
+  "target": "Qwen3.5-4B",
+  "thinking": false,
+  "shots": 4,
+  "policy": "Four-head input-only energy consensus; single-call and selected-prompt SC3",
+  "reproduction": "saved_question_level_outcome_reconstruction",
+  "inputs": "evidence/development/outcomes.jsonl",
+  "reference": "evidence/development/reference.json",
+  "fresh_generation_assets": "Original bank text, exact features, fitted checkpoints, target revision and request settings are not included."
+}

@@ -1,0 +1,24 @@
+{
+  "architecture": {
+    "family": "compact_vector",
+    "dim": 2560,
+    "views": 4,
+    "rank": 64,
+    "hidden": 96,
+    "shots": 4,
+    "window": 2,
+    "start_mode": "zero_start_question_nodes"
+  },
+  "training": {
+    "seed": 20261020,
+    "epochs": 40,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "patience": 5,
+    "rank_weight": 0.5,
+    "success_weight": 1.0,
+    "pair_mode": "reference",
+    "gradient_clip": 1.0,
+    "device": "cpu"
+  }
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the Maze paper when using the method and identify the project version for software reuse."
+title: "Maze: Prompt-Trajectory Planning"
+type: software
+version: 0.2.0
+license: MIT
+authors:
+  - family-names: Pei
+    given-names: Zhengqi
+  - family-names: Zhang
+    given-names: Anran
+  - family-names: Huang
+    given-names: Qingming
+  - family-names: Wang
+    given-names: Shuhui
+preferred-citation:
+  type: conference-paper
+  title: "Geometric Prompt-Trajectory Planning for Test-Time Scaling"
+  authors:
+    - family-names: Pei
+      given-names: Zhengqi
+    - family-names: Zhang
+      given-names: Anran
+    - family-names: Huang
+      given-names: Qingming
+    - family-names: Wang
+      given-names: Shuhui
+  year: 2026
+  url: "https://openreview.net/forum?id=e22Krci8Dn"

@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "model_revision": "SET_TO_YOUR_FROZEN_SERVING_REVISION",
+  "policy": "topk",
+  "calls": 3,
+  "shots": 4,
+  "pool_size": 100,
+  "seed": 20261020,
+  "decoding": {
+    "temperature": 0.3,
+    "max_tokens": 4096,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "tie_rule": "first",
+  "selection": "energy"
+}

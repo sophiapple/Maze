@@ -1,0 +1,19 @@
+include LICENSE README.md CITATION.cff THIRD_PARTY_NOTICES.md CHANGELOG.md CONTRIBUTING.md SECURITY.md
+include .gitignore .gitattributes
+recursive-include .github *.md *.yml
+include requirements-cpu.txt MANIFEST.json
+recursive-include configs *.json
+recursive-include docs *.md *.svg *.png
+recursive-include evidence *.json *.jsonl
+recursive-include results *.json *.csv *.md
+recursive-include provenance *.json
+recursive-include reproduction *.py *.md
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include examples *.py *.md
+recursive-include validation *.json *.txt
+prune runs
+prune data
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod] .DS_Store

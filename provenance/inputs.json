@@ -1,0 +1,37 @@
+{
+  "source_repository": "https://github.com/doppelgangera/Maze",
+  "source_revision": "ed751e785ab89ee38bfb9d41f42949de78618326",
+  "camera_ready": {
+    "file": "Maze-NIPS26-Oct20-v0.zip",
+    "main_tex_sha256": "489de5afc295394e2497401607de671ea9185e585af6e26d01867f86b38d0f7a"
+  },
+  "update_packet": {
+    "file": "maze-neurips-update-2026-10-20.zip",
+    "sha256": "07c0c374428d7d02472c847c3235d775e77b43515d0f6a07e16e695ed396a227"
+  },
+  "copied_modules": [
+    "maze_paper.scalar_energy",
+    "maze_paper.policies",
+    "maze_paper.evidence"
+  ],
+  "outcome_ledger_sha256": "6243acbae35f02b26fe9fde8b5be67b7fd5a1c28c40b07f1d8b72b7ab1fd9a14",
+  "reference_transform": "Publish the explicitly listed cohort/arm subsets. Preserve every original row byte-for-byte within each included arm, including incorrect and invalid outcomes. Remove aggregate-only result panels from the public results scope.",
+  "original_outcome_ledger_sha256": "4b220278fe3308b59656f5d06421be1ee8e1dc006d02914f0f6ef8634ae36c64",
+  "included_arms": {
+    "gpqa99_v206": [
+      "Maze_SC3",
+      "Maze_one_call",
+      "Raw_one_call",
+      "Raw_MV2",
+      "Raw_MV3",
+      "Raw_MV4",
+      "Raw_MV8"
+    ],
+    "mmlu32_v160": [
+      "learned_best_SC3",
+      "retrieval_SC3",
+      "uniform_fixed_Raw_SC3"
+    ]
+  },
+  "included_records": 789
+}
