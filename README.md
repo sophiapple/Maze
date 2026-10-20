@@ -60,10 +60,6 @@ A token ratio below 1 means fewer recorded processed tokens: target input + targ
 This is not an end-to-end latency or total training-cost measurement.
 SC3 votes three distinct requests for the same selected prompt; MV$N$ votes separately sampled prompt paths.
 
-These are **selected development-setting comparisons**, not seven independent benchmarks or an exhaustive evaluation.
-The [result report](results/reproduced/summary.json) includes exact fractions, paired wins/losses, and descriptive 95% bootstrap intervals.
-Intervals are conditional on these cohorts and are not adjusted for configuration selection; positive observed differences are not, by themselves, significance claims.
-
 ### Reconstruct the table on CPU
 
 From the repository root, using only Python's standard library:
@@ -78,7 +74,6 @@ See the [saved outputs](results/reproduced/) and [experiment definitions](docs/E
 
 > **What this reproduces:** the published aggregate accuracy, call counts, token accounting, and paired statistics from saved question-level correctness records.
 > It does not independently regrade response text or rerun the original target model.
-> Original benchmark feature tensors, trained checkpoints, and raw response archives are not bundled.
 > Fresh training and generation use the separate workflows below and require their own data and fitted assets.
 
 ## Start here
