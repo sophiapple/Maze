@@ -37,26 +37,6 @@ MultiMaze allocates a fixed budget across selected trajectories, with $\sum_{j=1
 Independent-pool winners, shared-pool top-$N$ selection, and repeated decoding of one selected prompt are all supported.
 See the [method](docs/METHOD.md) and [scorer configurations](configs/scorers/).
 
-## Results from the NeurIPS 2026 paper
-
-The camera-ready paper reports gains across **five reasoning benchmarks and three open-model families**. The following arithmetic is verified against source-bound excerpts from the author's October 20 camera-ready. These are **paper-reported results**, separate from the development reconstructions below.
-
-| Comparison | Positive model–task cells | Accuracy gain | Target calls, Maze / control |
-|---|---:|---:|---:|
-| Maze vs random few-shot prompting | **15 / 15** | +3.04 to +15.02 pp | 1 / 1 |
-| Maze vs pFLAT | **15 / 15** | +0.99 to +5.88 pp | 1 / 1 |
-| Maze vs EASE | **15 / 15** | +1.00 to +5.23 pp | 1 / 1 |
-| MultiMaze vs majority vote | **15 / 15** | +1.17 to +16.66 pp | **16 / 32** |
-
-The 15 cells are three targets × five tasks; the rows share cells. The paper also reports matched-pool selection controls, matched-capacity rankers, repeated-run variability, compute accounting, and black-box transfer. Explore the [paper evidence map](docs/PAPER_RESULTS.md), [105 main-table values](results/paper/main_results.csv), and [all 15 source tables](evidence/paper/tables.json).
-
-```bash
-# Verify the source transcription and recompute all 60 main-table contrasts.
-python scripts/reproduce_paper.py --output runs/paper
-```
-
-This verifies the table transcription and arithmetic. Full regeneration of the original benchmark runs requires the original checkpoints, feature bundles, and response archives listed in [asset access](docs/ASSETS.md).
-
 ## Measured results
 
 **Nine highlighted positive comparisons, backed by 1,214 saved question-by-policy outcomes and all 21 named-control contrasts.** The included cohorts are GPQA32, GPQA Diamond99, and MMLU-Pro32; GPQA32 supports replay of the underlying votes.
@@ -78,12 +58,6 @@ All rows below use **nonthinking Qwen3.5-4B with four complete exemplars**. They
 <!-- END GENERATED DEVELOPMENT HIGHLIGHTS -->
 
 **Cost scope.** Calls are Maze / comparator. Token ratio is recorded target input + target output + once-per-query encoder processing, including full prompt rereads. A ratio below 1 means fewer tokens in those components; it is not an end-to-end latency, training-cost, or hardware-cost claim. Offline bank processing is reported separately. SC3 repeats one complete prompt in three distinct requests; MV uses separately sampled prompt paths.
-
-**All controls matter.** On GPQA99, retrieval with one call reaches **72/99**, ahead of Maze SC3's **71/99**; random-prompt SC3 and retrieval SC3 also reach 71/99. On GPQA32, Maze's 26/32 versus retrieval's 22/32 costs **24.8% more** recorded tokens; its 26/32 versus MV8's 24/32 uses **55.5% fewer**. These are scoped observations, not universal superiority. All ties, losses, invalid answers, and capped outputs remain in the [complete comparison table](results/reproduced/comparisons.md) and [17-arm ledger](results/reproduced/all_arms.csv).
-
-The [machine-readable report](results/reproduced/summary.json) provides exact fractions, paired wins/losses, and descriptive 95% bootstrap intervals. The cohorts and configurations were selected during development; the intervals are not adjusted for that selection. Positive point differences alone are not significance claims.
-
-![All 17 development arms with accuracy and recorded deployment tokens](docs/assets/development-results.svg)
 
 ### Reproduce the evidence on CPU
 
