@@ -1,95 +1,86 @@
 {
-  "schema": 1,
-  "date": "2026-10-20",
-  "state": "passed",
-  "scope": "CPU source, numerical reference, saved-outcome reconstruction, synthetic workflows, and local mock HTTP checks.",
+  "schema": 2,
+  "date": "2026-10-25",
+  "version": "0.2.1",
+  "state": "passed_local_validation",
+  "scope": "CPU numerical checks, saved-outcome and vote reconstruction, paper-table transcription, synthetic workflows, and mock HTTP checks.",
   "environment": {
-    "python": "3.13.5",
-    "numpy": "2.3.5",
-    "torch": "2.10.0+cpu",
-    "platform": "Linux",
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "torch": "2.2.2",
+    "platform": "Darwin",
+    "machine": "x86_64",
     "device": "cpu"
   },
   "tests": {
     "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
-    "count": 71,
+    "count": 83,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "log": "validation/unittest.txt"
   },
-  "numerical_checks": [
-    "paper scalar: independent loop vs vectorized NumPy",
-    "NumPy vs differentiable PyTorch across three scorer families",
-    "compact vector vs preserved StructuredEnergyV118",
-    "full-QA vector vs preserved StructuredEnergyV126",
-    "residual calibration vs preserved v142 implementation"
-  ],
   "evidence": {
-    "questions": 131,
-    "cohorts": 2,
-    "arms": 10,
-    "records": 789,
-    "selected_comparisons": 7,
-    "mode": "reconstruction from recorded numeric correctness and cost",
+    "cohorts": 3,
+    "cohort_memberships": 163,
+    "distinct_source_question_ids": 150,
+    "shared_gpqa_question_ids": 13,
+    "arms": 17,
+    "records": 1214,
+    "all_named_control_comparisons": 21,
+    "highlighted_positive_comparisons": 9,
+    "previous_outcomes_preserved": 789,
+    "restored_control_outcomes": 297,
+    "added_closed_gpqa32_outcomes": 128,
+    "gpqa32_call_observations": 544,
+    "gpqa32_distinct_cached_requests": 487,
+    "gpqa32_votes_reconstructed": 128,
     "fresh_target_generations": 0,
-    "independent_response_regrading": false
+    "independent_response_regrading": false,
+    "current_ungraded_empirical_memory_screen_used": false
   },
-  "not_executed": [
-    "Fresh benchmark encoder/model inference",
-    "Real-target generation or paid API calls",
-    "Training on real benchmark data",
-    "Hosted GitHub Actions",
-    "Remote repository creation or publication"
-  ],
-  "ci": "Workflow supplied; local tests above executed in Python 3.13.5 only. Other matrix versions await their own CI runs.",
-  "stdlib_reconstruction": {
-    "command": "python -S scripts/reproduce_results.py --output runs/reproduced",
-    "passed": true,
-    "third_party_packages_loaded": false,
-    "output_formats": [
-      "JSON",
-      "CSV",
-      "Markdown"
-    ]
+  "paper": {
+    "tables": 15,
+    "main_table_values": 105,
+    "main_table_contrasts": 60,
+    "mode": "source-bound transcription and arithmetic, not a fresh benchmark replication",
+    "full_author_source_sha256": "489de5afc295394e2497401607de671ea9185e585af6e26d01867f86b38d0f7a",
+    "full_author_source_binding_checked": true
   },
-  "core_only_environment": {
-    "tests_discovered": 71,
-    "passed": 67,
-    "skipped_optional_torch": 4,
-    "errors": 0,
-    "failures": 0,
-    "log": "validation/unittest-core.txt"
+  "synthetic_workflows": {
+    "maze_demo": "passed",
+    "maze_train_demo": "passed",
+    "benchmark_performance_claim": false
+  },
+  "source_audit": {
+    "preserved_upstream_modules": 4,
+    "prior_789_numeric_outcomes_unchanged": true,
+    "python_ast": "passed",
+    "relative_documentation_links": 61,
+    "manifest_source_files": 122,
+    "credential_pattern_scan": "No matching token or private-key patterns; not a formal security audit."
   },
   "packaging": {
     "wheel_build": "passed",
     "source_distribution_build": "passed",
     "wheel_install": "passed",
-    "wheel_cli": "passed",
-    "wheel_synthetic_demo": "passed",
-    "wheel_synthetic_training_demo": "passed",
-    "environment_note": "Installation used an isolated venv without network resolution. Optional training checks reused locally installed NumPy/PyTorch via PYTHONPATH; this is not a clean online dependency-resolution test."
+    "wheel_cli_synthetic_demo": "passed",
+    "extracted_source_distribution_stdlib_verification": "passed",
+    "environment_note": "Wheel installed without dependency resolution into an isolated target directory; code origin was checked, and dependencies came from the locally tested environment. This is not a clean online installation on every supported platform."
   },
-  "source_audit": {
-    "python_ast": "passed",
-    "relative_documentation_links": "passed",
-    "preserved_upstream_modules": 4,
-    "credential_pattern_scan": "no matching credential patterns; not a formal security audit"
-  },
-  "readme_preview": {
-    "images_loaded": 6,
-    "horizontal_overflow": false,
-    "format": "self-contained HTML plus PNG visual preview",
-    "inspection": "header, pipeline, result table, and lower sections inspected"
-  },
-  "archive_checks": {
-    "clean_extraction": "passed",
-    "stdlib_result_regeneration": "passed",
-    "all_three_saved_outputs_byte_identical": true,
-    "tests": 71,
-    "synthetic_plan_collect_grade": "passed",
-    "synthetic_train_export": "passed",
-    "git_index_tracks_only_intended_files": true,
-    "file_count": 100
+  "not_executed": [
+    "Fresh benchmark target or encoder inference",
+    "Fitting on real benchmark data",
+    "Independent raw-response re-parsing or regrading",
+    "Paid API requests"
+  ],
+  "hosted_ci": "Pending at local validation time. The workflow runs core checks on Python 3.11/3.12/3.13 and numerical PyTorch checks on Linux; consult the pull request for live status.",
+  "previous_validation": "validation/history/0.2.0/",
+  "stdlib_reconstruction": {
+    "command": "python3 -S scripts/verify_release.py",
+    "passed": true,
+    "third_party_packages_loaded": false,
+    "generated_reports_byte_identical": true,
+    "readme_highlights_match": true
   }
 }

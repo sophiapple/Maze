@@ -1,0 +1,106 @@
+table,model,method,benchmark,accuracy_percent_reported
+tab:single_call_results,Mistral-7B,Original,MMLU-Pro,24.29
+tab:single_call_results,Mistral-7B,Original,GPQA,29.69
+tab:single_call_results,Mistral-7B,Original,GSM8K,53.46
+tab:single_call_results,Mistral-7B,Original,MATH500,42.12
+tab:single_call_results,Mistral-7B,Original,AIME,7.78
+tab:single_call_results,Mistral-7B,pFLAT,MMLU-Pro,26.43
+tab:single_call_results,Mistral-7B,pFLAT,GPQA,31.70
+tab:single_call_results,Mistral-7B,pFLAT,GSM8K,58.08
+tab:single_call_results,Mistral-7B,pFLAT,MATH500,45.28
+tab:single_call_results,Mistral-7B,pFLAT,AIME,12.35
+tab:single_call_results,Mistral-7B,EASE,MMLU-Pro,26.79
+tab:single_call_results,Mistral-7B,EASE,GPQA,32.81
+tab:single_call_results,Mistral-7B,EASE,GSM8K,58.46
+tab:single_call_results,Mistral-7B,EASE,MATH500,46.12
+tab:single_call_results,Mistral-7B,EASE,AIME,13.68
+tab:single_call_results,Mistral-7B,Maze (Ours),MMLU-Pro,28.94
+tab:single_call_results,Mistral-7B,Maze (Ours),GPQA,34.35
+tab:single_call_results,Mistral-7B,Maze (Ours),GSM8K,63.56
+tab:single_call_results,Mistral-7B,Maze (Ours),MATH500,48.20
+tab:single_call_results,Mistral-7B,Maze (Ours),AIME,18.23
+tab:single_call_results,LLaMA3-8B,Original,MMLU-Pro,41.37
+tab:single_call_results,LLaMA3-8B,Original,GPQA,31.65
+tab:single_call_results,LLaMA3-8B,Original,GSM8K,80.90
+tab:single_call_results,LLaMA3-8B,Original,MATH500,48.40
+tab:single_call_results,LLaMA3-8B,Original,AIME,4.12
+tab:single_call_results,LLaMA3-8B,pFLAT,MMLU-Pro,44.50
+tab:single_call_results,LLaMA3-8B,pFLAT,GPQA,35.80
+tab:single_call_results,LLaMA3-8B,pFLAT,GSM8K,85.78
+tab:single_call_results,LLaMA3-8B,pFLAT,MATH500,51.36
+tab:single_call_results,LLaMA3-8B,pFLAT,AIME,9.20
+tab:single_call_results,LLaMA3-8B,EASE,MMLU-Pro,45.10
+tab:single_call_results,LLaMA3-8B,EASE,GPQA,35.85
+tab:single_call_results,LLaMA3-8B,EASE,GSM8K,85.91
+tab:single_call_results,LLaMA3-8B,EASE,MATH500,52.80
+tab:single_call_results,LLaMA3-8B,EASE,AIME,9.35
+tab:single_call_results,LLaMA3-8B,Maze (Ours),MMLU-Pro,48.32
+tab:single_call_results,LLaMA3-8B,Maze (Ours),GPQA,39.10
+tab:single_call_results,LLaMA3-8B,Maze (Ours),GSM8K,87.72
+tab:single_call_results,LLaMA3-8B,Maze (Ours),MATH500,53.80
+tab:single_call_results,LLaMA3-8B,Maze (Ours),AIME,14.58
+tab:single_call_results,Qwen3-8B,Original,MMLU-Pro,59.74
+tab:single_call_results,Qwen3-8B,Original,GPQA,38.35
+tab:single_call_results,Qwen3-8B,Original,GSM8K,89.98
+tab:single_call_results,Qwen3-8B,Original,MATH500,86.82
+tab:single_call_results,Qwen3-8B,Original,AIME,47.57
+tab:single_call_results,Qwen3-8B,pFLAT,MMLU-Pro,66.13
+tab:single_call_results,Qwen3-8B,pFLAT,GPQA,49.95
+tab:single_call_results,Qwen3-8B,pFLAT,GSM8K,92.03
+tab:single_call_results,Qwen3-8B,pFLAT,MATH500,88.24
+tab:single_call_results,Qwen3-8B,pFLAT,AIME,49.25
+tab:single_call_results,Qwen3-8B,EASE,MMLU-Pro,66.95
+tab:single_call_results,Qwen3-8B,EASE,GPQA,48.30
+tab:single_call_results,Qwen3-8B,EASE,GSM8K,91.77
+tab:single_call_results,Qwen3-8B,EASE,MATH500,87.98
+tab:single_call_results,Qwen3-8B,EASE,AIME,50.32
+tab:single_call_results,Qwen3-8B,Maze (Ours),MMLU-Pro,70.05
+tab:single_call_results,Qwen3-8B,Maze (Ours),GPQA,53.37
+tab:single_call_results,Qwen3-8B,Maze (Ours),GSM8K,93.02
+tab:single_call_results,Qwen3-8B,Maze (Ours),MATH500,90.12
+tab:single_call_results,Qwen3-8B,Maze (Ours),AIME,53.21
+tab:multi_call_results,Mistral-7B,Majority vote,MMLU-Pro,28.93
+tab:multi_call_results,Mistral-7B,Majority vote,GPQA,37.28
+tab:multi_call_results,Mistral-7B,Majority vote,GSM8K,73.46
+tab:multi_call_results,Mistral-7B,Majority vote,MATH500,48.25
+tab:multi_call_results,Mistral-7B,Majority vote,AIME,19.25
+tab:multi_call_results,Mistral-7B,Random oracle,MMLU-Pro,35.00
+tab:multi_call_results,Mistral-7B,Random oracle,GPQA,39.96
+tab:multi_call_results,Mistral-7B,Random oracle,GSM8K,80.38
+tab:multi_call_results,Mistral-7B,Random oracle,MATH500,52.67
+tab:multi_call_results,Mistral-7B,Random oracle,AIME,23.46
+tab:multi_call_results,Mistral-7B,MultiMaze,MMLU-Pro,37.25
+tab:multi_call_results,Mistral-7B,MultiMaze,GPQA,43.52
+tab:multi_call_results,Mistral-7B,MultiMaze,GSM8K,84.39
+tab:multi_call_results,Mistral-7B,MultiMaze,MATH500,55.58
+tab:multi_call_results,Mistral-7B,MultiMaze,AIME,27.75
+tab:multi_call_results,LLaMA3-8B,Majority vote,MMLU-Pro,53.53
+tab:multi_call_results,LLaMA3-8B,Majority vote,GPQA,41.03
+tab:multi_call_results,LLaMA3-8B,Majority vote,GSM8K,93.05
+tab:multi_call_results,LLaMA3-8B,Majority vote,MATH500,54.28
+tab:multi_call_results,LLaMA3-8B,Majority vote,AIME,15.65
+tab:multi_call_results,LLaMA3-8B,Random oracle,MMLU-Pro,60.59
+tab:multi_call_results,LLaMA3-8B,Random oracle,GPQA,46.15
+tab:multi_call_results,LLaMA3-8B,Random oracle,GSM8K,94.59
+tab:multi_call_results,LLaMA3-8B,Random oracle,MATH500,56.76
+tab:multi_call_results,LLaMA3-8B,Random oracle,AIME,17.82
+tab:multi_call_results,LLaMA3-8B,MultiMaze,MMLU-Pro,62.39
+tab:multi_call_results,LLaMA3-8B,MultiMaze,GPQA,51.48
+tab:multi_call_results,LLaMA3-8B,MultiMaze,GSM8K,95.52
+tab:multi_call_results,LLaMA3-8B,MultiMaze,MATH500,60.52
+tab:multi_call_results,LLaMA3-8B,MultiMaze,AIME,21.68
+tab:multi_call_results,Qwen3-14B,Majority vote,MMLU-Pro,82.80
+tab:multi_call_results,Qwen3-14B,Majority vote,GPQA,54.32
+tab:multi_call_results,Qwen3-14B,Majority vote,GSM8K,94.65
+tab:multi_call_results,Qwen3-14B,Majority vote,MATH500,92.30
+tab:multi_call_results,Qwen3-14B,Majority vote,AIME,55.12
+tab:multi_call_results,Qwen3-14B,Random oracle,MMLU-Pro,85.98
+tab:multi_call_results,Qwen3-14B,Random oracle,GPQA,65.27
+tab:multi_call_results,Qwen3-14B,Random oracle,GSM8K,95.72
+tab:multi_call_results,Qwen3-14B,Random oracle,MATH500,92.90
+tab:multi_call_results,Qwen3-14B,Random oracle,AIME,59.39
+tab:multi_call_results,Qwen3-14B,MultiMaze,MMLU-Pro,87.85
+tab:multi_call_results,Qwen3-14B,MultiMaze,GPQA,70.98
+tab:multi_call_results,Qwen3-14B,MultiMaze,GSM8K,95.82
+tab:multi_call_results,Qwen3-14B,MultiMaze,MATH500,95.06
+tab:multi_call_results,Qwen3-14B,MultiMaze,AIME,61.30

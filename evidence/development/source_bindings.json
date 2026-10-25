@@ -12,5 +12,46 @@
     "sha256": "606fd08e055bbf3e929e043296b303ff3c6ba991eb67cd7713f138511817ed21",
     "source_bytes": 26464,
     "export": "numeric outcome/cost allowlist; question IDs replaced by sorted ordinal"
+  },
+  {
+    "cohort": "gpqa32_v166",
+    "files": [
+      {
+        "remote_path": "runs/comparison-full-bank-p4-gpqa-replication-v108/evaluated.json",
+        "sha256": "6d13ee0c541cea27bd8f41f49f7193e9a209009e8e40d4b7152b5a83f8e96c63",
+        "source_bytes": 417876
+      },
+      {
+        "remote_path": "runs/comparison-p4-gpqa-neural-followup-v134/evaluated.json",
+        "sha256": "3d39505c4e608c564a6e335319b3d8a502ab389844d28d40e5cfea64ec1d2f7f",
+        "source_bytes": 67725
+      },
+      {
+        "remote_path": "reports/gpqa_frozen_repeat_v166/summary.json",
+        "sha256": "b7413f8fc198be6abd2634d00b41aa7c5a277f85054526d4c52d5f78a2e2a24c",
+        "source_bytes": 2193
+      },
+      {
+        "remote_path": "reports/gpqa_frozen_repeat_v166/mv8_secondary_addendum.json",
+        "sha256": "a409888365d4f7ea9bfb1d1ef55c21417c89d58a777020eb8b440a7efe832bd7",
+        "source_bytes": 956
+      },
+      {
+        "remote_path": "reports/p4_frozen_replication_v108/encoder_reuse.json",
+        "sha256": "264283b9a88ac7f0cfe4117bfeeec8cf5dbcd9bc22e1602b1b5cef7d0ede5ce4",
+        "source_bytes": 86119
+      },
+      {
+        "remote_path": "configs/plans/gpqa-frozen-repeat-v166.json",
+        "sha256": "a13f6eee54bb8ad84117b4faec05dd10b306e193b4e8053aea9ba258708f781c",
+        "source_bytes": 1981
+      },
+      {
+        "remote_path": "cache/gpqa_registered_analysis_v206/policy_decisions_private.json",
+        "sha256": "ec984e4eab296e45b5193ce0b37a1a757b197296c210507c0c343c52c8b9a7e6",
+        "source_bytes": 647524
+      }
+    ],
+    "export": "All four archived policies, all 32 questions and all 544 call observations; 487 distinct cached request IDs. Opaque answer classes preserve parsed equality. Query IDs and request IDs replaced with ordinals. No new grading or generation."
   }
 ]

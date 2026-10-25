@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-25",
+  "base_revision": "f6cadf202c4b41fbb2ce142fdca9a4abd8a37922",
+  "new_generation_calls": 0,
+  "new_fits": 0,
+  "new_encoder_forwards": 0,
+  "new_api_spending": 0,
+  "prior_rows_preserved": 789,
+  "restored_control_rows": 297,
+  "added_closed_cohort_rows": 128,
+  "paper_table_count": 15,
+  "current_empirical_memory_screen_used": false,
+  "remote_campaign_writes": 0
+}

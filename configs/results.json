@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "title": "Selected reproducible development-cohort comparisons",
+  "title": "Complete named-control comparisons for three disclosed development cohorts",
   "target": "Qwen3.5-4B",
   "thinking": false,
   "shots": 4,
@@ -18,7 +18,8 @@
       "maze_arm": "Maze_one_call",
       "baseline_arm": "Raw_one_call",
       "maze_label": "Single-call Maze",
-      "baseline_label": "Random prompt, 1 call"
+      "baseline_label": "Random prompt, 1 call",
+      "highlight": true
     },
     {
       "id": "gpqa-one-vs-mv2",
@@ -26,7 +27,8 @@
       "maze_arm": "Maze_one_call",
       "baseline_arm": "Raw_MV2",
       "maze_label": "Single-call Maze",
-      "baseline_label": "Random-path MV2"
+      "baseline_label": "Random-path MV2",
+      "highlight": true
     },
     {
       "id": "gpqa-sc3-vs-mv3",
@@ -34,7 +36,8 @@
       "maze_arm": "Maze_SC3",
       "baseline_arm": "Raw_MV3",
       "maze_label": "MultiMaze, repeated prompt",
-      "baseline_label": "Random-path MV3"
+      "baseline_label": "Random-path MV3",
+      "highlight": true
     },
     {
       "id": "gpqa-sc3-vs-mv4",
@@ -42,7 +45,8 @@
       "maze_arm": "Maze_SC3",
       "baseline_arm": "Raw_MV4",
       "maze_label": "MultiMaze, repeated prompt",
-      "baseline_label": "Random-path MV4"
+      "baseline_label": "Random-path MV4",
+      "highlight": true
     },
     {
       "id": "gpqa-sc3-vs-mv8",
@@ -50,7 +54,8 @@
       "maze_arm": "Maze_SC3",
       "baseline_arm": "Raw_MV8",
       "maze_label": "MultiMaze, repeated prompt",
-      "baseline_label": "Random-path MV8"
+      "baseline_label": "Random-path MV8",
+      "highlight": true
     },
     {
       "id": "mmlu-sc3-vs-retrieval",
@@ -58,7 +63,8 @@
       "maze_arm": "learned_best_SC3",
       "baseline_arm": "retrieval_SC3",
       "maze_label": "MultiMaze, repeated prompt",
-      "baseline_label": "Retrieval SC3"
+      "baseline_label": "Retrieval SC3",
+      "highlight": true
     },
     {
       "id": "mmlu-sc3-vs-random",
@@ -66,7 +72,139 @@
       "maze_arm": "learned_best_SC3",
       "baseline_arm": "uniform_fixed_Raw_SC3",
       "maze_label": "MultiMaze, repeated prompt",
-      "baseline_label": "Random-prompt SC3"
+      "baseline_label": "Random-prompt SC3",
+      "highlight": true
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-Raw_MV3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "Raw_MV3",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random-path MV3",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-Raw_MV4",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "Raw_MV4",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random-path MV4",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-Raw_MV8",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "Raw_MV8",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random-path MV8",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-uniform_Raw_SC3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "uniform_Raw_SC3",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Random-prompt SC3",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-retrieval_one_call",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "retrieval_one_call",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Retrieval, 1 call",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_one_call-vs-retrieval_SC3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_one_call",
+      "baseline_arm": "retrieval_SC3",
+      "maze_label": "Single-call Maze",
+      "baseline_label": "Retrieval SC3",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_SC3-vs-Raw_one_call",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "Raw_one_call",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random prompt, 1 call",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_SC3-vs-Raw_MV2",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "Raw_MV2",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-path MV2",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_SC3-vs-uniform_Raw_SC3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "uniform_Raw_SC3",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Random-prompt SC3",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_SC3-vs-retrieval_one_call",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "retrieval_one_call",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Retrieval, 1 call",
+      "highlight": false
+    },
+    {
+      "id": "gpqa99-Maze_SC3-vs-retrieval_SC3",
+      "cohort": "gpqa99_v206",
+      "maze_arm": "Maze_SC3",
+      "baseline_arm": "retrieval_SC3",
+      "maze_label": "MultiMaze, repeated prompt",
+      "baseline_label": "Retrieval SC3",
+      "highlight": false
+    },
+    {
+      "id": "gpqa32-vs-retrieval_SC3",
+      "cohort": "gpqa32_v166",
+      "maze_arm": "Maze_selected_SC3",
+      "baseline_arm": "retrieval_SC3",
+      "maze_label": "MultiMaze, fixed selected prompt",
+      "baseline_label": "Retrieval SC3",
+      "highlight": true
+    },
+    {
+      "id": "gpqa32-vs-Raw_MV8",
+      "cohort": "gpqa32_v166",
+      "maze_arm": "Maze_selected_SC3",
+      "baseline_arm": "Raw_MV8",
+      "maze_label": "MultiMaze, fixed selected prompt",
+      "baseline_label": "Random-path MV8",
+      "highlight": true
+    },
+    {
+      "id": "gpqa32-vs-legacy_v108_SC3",
+      "cohort": "gpqa32_v166",
+      "maze_arm": "Maze_selected_SC3",
+      "baseline_arm": "legacy_v108_SC3",
+      "maze_label": "MultiMaze, fixed selected prompt",
+      "baseline_label": "Legacy planner SC3",
+      "highlight": false
     }
-  ]
+  ],
+  "cohort_displays": {
+    "gpqa99_v206": "GPQA Diamond99",
+    "mmlu32_v160": "MMLU-Pro32",
+    "gpqa32_v166": "GPQA32 (post hoc)"
+  }
 }

@@ -2,8 +2,9 @@ cff-version: 1.2.0
 message: "Please cite the Maze paper when using the method and identify the project version for software reuse."
 title: "Maze: Prompt-Trajectory Planning"
 type: software
-version: 0.2.0
+version: 0.2.1
 license: MIT
+repository-code: "https://github.com/sophiapple/Maze"
 authors:
   - family-names: Pei
     given-names: Zhengqi

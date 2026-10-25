@@ -32,15 +32,27 @@ test_reject_nonfinite (test_paper_reference.ScalarEquationTests.test_reject_nonf
 test_zero_source_states_have_zero_outgoing_energy (test_paper_reference.ScalarEquationTests.test_zero_source_states_have_zero_outgoing_energy) ... ok
 test_all_included_arms_match_reference (test_recorded_evidence.RecordedEvidenceTests.test_all_included_arms_match_reference) ... ok
 test_changed_correctness_detected (test_recorded_evidence.RecordedEvidenceTests.test_changed_correctness_detected) ... ok
+test_missing_entire_cohort_rejected (test_recorded_evidence.RecordedEvidenceTests.test_missing_entire_cohort_rejected) ... ok
 test_missing_included_comparator_rejected (test_recorded_evidence.RecordedEvidenceTests.test_missing_included_comparator_rejected) ... ok
 test_missing_question_and_duplicate_rejected (test_recorded_evidence.RecordedEvidenceTests.test_missing_question_and_duplicate_rejected) ... ok
 test_outcome_schema (test_recorded_evidence.RecordedEvidenceTests.test_outcome_schema) ... ok
 test_retains_every_question_in_each_included_arm (test_recorded_evidence.RecordedEvidenceTests.test_retains_every_question_in_each_included_arm) ... ok
 test_seven_exact_comparisons (test_recorded_evidence.RecordedEvidenceTests.test_seven_exact_comparisons) ... ok
 test_token_accounting_checked (test_recorded_evidence.RecordedEvidenceTests.test_token_accounting_checked) ... ok
+test_changed_cell_rejected_against_excerpt (test_release_evidence.PaperEvidenceTests.test_changed_cell_rejected_against_excerpt) ... ok
+test_complete_source_and_main_table_coverage (test_release_evidence.PaperEvidenceTests.test_complete_source_and_main_table_coverage) ... ok
+test_duplicate_table_label_rejected (test_release_evidence.PaperEvidenceTests.test_duplicate_table_label_rejected) ... ok
+test_paper_outputs_are_byte_reproducible (test_release_evidence.PaperEvidenceTests.test_paper_outputs_are_byte_reproducible) ... ok
+test_wrong_full_source_rejected (test_release_evidence.PaperEvidenceTests.test_wrong_full_source_rejected) ... ok
+test_all_votes_and_reused_request_accounting (test_release_evidence.VoteEvidenceTests.test_all_votes_and_reused_request_accounting) ... ok
+test_conflicting_shared_request_rejected (test_release_evidence.VoteEvidenceTests.test_conflicting_shared_request_rejected) ... ok
+test_cost_or_grade_corruption_rejected (test_release_evidence.VoteEvidenceTests.test_cost_or_grade_corruption_rejected) ... ok
+test_earliest_valid_tie_with_null_and_capped_answer (test_release_evidence.VoteEvidenceTests.test_earliest_valid_tie_with_null_and_capped_answer) ... ok
+test_missing_call_or_duplicate_cannot_complete_vote (test_release_evidence.VoteEvidenceTests.test_missing_call_or_duplicate_cannot_complete_vote) ... ok
 test_benchmark_conversion (test_scripts.DataScriptTests.test_benchmark_conversion) ... ok
 test_explicit_training_pools_are_executed_without_scorer (test_scripts.DataScriptTests.test_explicit_training_pools_are_executed_without_scorer) ... ok
 test_local_edit_chain_has_no_labels_and_is_reproducible (test_scripts.DataScriptTests.test_local_edit_chain_has_no_labels_and_is_reproducible) ... ok
+test_generated_metadata_is_distinct_from_source (test_source_distribution.SourceDistributionAuditTests.test_generated_metadata_is_distinct_from_source) ... ok
 test_local_edit_definition (test_training.TrainingContracts.test_local_edit_definition) ... ok
 test_question_split_overlap_rejected (test_training.TrainingContracts.test_question_split_overlap_rejected) ... ok
 test_residual_matches_preserved_source (test_training.TrainingContracts.test_residual_matches_preserved_source) ... ok
@@ -71,6 +83,6 @@ test_partial_evaluation_rejected (test_workflow.WorkflowTests.test_partial_evalu
 test_uncertain_physical_request_is_not_retried (test_workflow.WorkflowTests.test_uncertain_physical_request_is_not_retried) ... ok
 
 ----------------------------------------------------------------------
-Ran 71 tests in 1.612s
+Ran 83 tests in 7.728s
 
 OK

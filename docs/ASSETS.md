@@ -3,7 +3,8 @@
 ## Included
 
 This source tree includes the Maze implementations, independent references, preserved compact scorer code, tests, configurations, a paper pipeline image, and numeric records for the declared development experiments.
-The 789 published records contain cohort-local ordinal IDs, binary evaluated correctness, call counts, and token/counter measurements.
+The 1,214 published outcome records contain cohort-local ordinal IDs, binary evaluated correctness, call counts, and token/counter measurements.
+The GPQA32 supplement also includes opaque answer-equivalence classes and reused-call ordinals. These do not disclose answer text.
 They contain no benchmark question text, gold answers, raw target responses, model weights, or credentials.
 
 ## Supplied by the user for new model runs

@@ -4,7 +4,7 @@
     <a href="https://openreview.net/forum?id=e22Krci8Dn"><img src="docs/assets/badge-paper.svg" alt="Research: NeurIPS 2026"></a>
     <a href="pyproject.toml"><img src="docs/assets/badge-python.svg" alt="Python 3.11+"></a>
     <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT license"></a>
-    <a href="CHANGELOG.md"><img src="docs/assets/badge-version.svg" alt="Version 0.2.0"></a>
+    <a href="CHANGELOG.md"><img src="docs/assets/badge-version.svg" alt="Version 0.2.1"></a>
   </p>
   <p><a href="#the-idea">The idea</a> · <a href="#measured-results">Results</a> · <a href="#start-here">Get started</a> · <a href="docs/USAGE.md">Run Maze</a> · <a href="docs/DEVELOPMENT.md">Build on Maze</a> · <a href="#citation">Cite</a></p>
 </div>
@@ -37,13 +37,33 @@ MultiMaze allocates a fixed budget across selected trajectories, with $\sum_{j=1
 Independent-pool winners, shared-pool top-$N$ selection, and repeated decoding of one selected prompt are all supported.
 See the [method](docs/METHOD.md) and [scorer configurations](configs/scorers/).
 
+## Results from the NeurIPS 2026 paper
+
+The camera-ready paper reports gains across **five reasoning benchmarks and three open-model families**. The following arithmetic is verified against source-bound excerpts from the author's October 20 camera-ready. These are **paper-reported results**, separate from the development reconstructions below.
+
+| Comparison | Positive model–task cells | Accuracy gain | Target calls, Maze / control |
+|---|---:|---:|---:|
+| Maze vs random few-shot prompting | **15 / 15** | +3.04 to +15.02 pp | 1 / 1 |
+| Maze vs pFLAT | **15 / 15** | +0.99 to +5.88 pp | 1 / 1 |
+| Maze vs EASE | **15 / 15** | +1.00 to +5.23 pp | 1 / 1 |
+| MultiMaze vs majority vote | **15 / 15** | +1.17 to +16.66 pp | **16 / 32** |
+
+The 15 cells are three targets × five tasks; the rows share cells. The paper also reports matched-pool selection controls, matched-capacity rankers, repeated-run variability, compute accounting, and black-box transfer. Explore the [paper evidence map](docs/PAPER_RESULTS.md), [105 main-table values](results/paper/main_results.csv), and [all 15 source tables](evidence/paper/tables.json).
+
+```bash
+# Verify the source transcription and recompute all 60 main-table contrasts.
+python scripts/reproduce_paper.py --output runs/paper
+```
+
+This verifies the table transcription and arithmetic. Full regeneration of the original benchmark runs requires the original checkpoints, feature bundles, and response archives listed in [asset access](docs/ASSETS.md).
+
 ## Measured results
 
-**Seven selected comparisons across two development cohorts, with 131 questions and 789 question-by-arm records.**
-The following results are reconstructed from the included numeric outcome ledger, not copied from the paper tables.
-Every row uses **nonthinking Qwen3.5-4B** with **four complete exemplars**.
-Cohort sizes are part of the names: GPQA Diamond99 and MMLU-Pro32 are not the full benchmarks.
+**Nine highlighted positive comparisons, backed by 1,214 saved question-by-policy outcomes and all 21 named-control contrasts.** The included cohorts are GPQA32, GPQA Diamond99, and MMLU-Pro32; GPQA32 supports replay of the underlying votes.
 
+All rows below use **nonthinking Qwen3.5-4B with four complete exemplars**. They are compact development configurations of Maze; their model, scorer, bank, decoding, and repeated-prompt policies differ from the paper's main experiments. These are selected development cohorts across two benchmark families. GPQA32 is a post-hoc cached operating point; the GPQA cohorts partly overlap and are not independent replications. See the [cohort definitions](docs/EXPERIMENTS.md) for selection history and exact membership accounting.
+
+<!-- BEGIN GENERATED DEVELOPMENT HIGHLIGHTS -->
 | Cohort | Maze policy | Baseline | Maze accuracy | Baseline accuracy | Gain | Calls | Token ratio |
 |---|---|---|---:|---:|---:|---:|---:|
 | GPQA Diamond99 | Single-call Maze | Random prompt, 1 call | **65.66%** | 62.63% | +3.03 pp | 1 / 1 | 1.058× |
@@ -53,36 +73,43 @@ Cohort sizes are part of the names: GPQA Diamond99 and MMLU-Pro32 are not the fu
 | GPQA Diamond99 | MultiMaze, repeated prompt | Random-path MV8 | **71.72%** | 69.70% | +2.02 pp | 3 / 8 | 0.376× |
 | MMLU-Pro32 | MultiMaze, repeated prompt | Retrieval SC3 | **78.12%** | 75.00% | +3.12 pp | 3 / 3 | 0.997× |
 | MMLU-Pro32 | MultiMaze, repeated prompt | Random-prompt SC3 | **78.12%** | 65.62% | +12.50 pp | 3 / 3 | 1.105× |
+| GPQA32 (post hoc) | MultiMaze, fixed selected prompt | Retrieval SC3 | **81.25%** | 68.75% | +12.50 pp | 3 / 3 | 1.248× |
+| GPQA32 (post hoc) | MultiMaze, fixed selected prompt | Random-path MV8 | **81.25%** | 75.00% | +6.25 pp | 3 / 8 | 0.445× |
+<!-- END GENERATED DEVELOPMENT HIGHLIGHTS -->
 
+**Cost scope.** Calls are Maze / comparator. Token ratio is recorded target input + target output + once-per-query encoder processing, including full prompt rereads. A ratio below 1 means fewer tokens in those components; it is not an end-to-end latency, training-cost, or hardware-cost claim. Offline bank processing is reported separately. SC3 repeats one complete prompt in three distinct requests; MV uses separately sampled prompt paths.
 
-**Reading the table.** Calls are Maze / comparator.
-A token ratio below 1 means fewer recorded processed tokens: target input + target output + once-per-query encoder tokens.
-This is not an end-to-end latency or total training-cost measurement.
-SC3 votes three distinct requests for the same selected prompt; MV$N$ votes separately sampled prompt paths.
+**All controls matter.** On GPQA99, retrieval with one call reaches **72/99**, ahead of Maze SC3's **71/99**; random-prompt SC3 and retrieval SC3 also reach 71/99. On GPQA32, Maze's 26/32 versus retrieval's 22/32 costs **24.8% more** recorded tokens; its 26/32 versus MV8's 24/32 uses **55.5% fewer**. These are scoped observations, not universal superiority. All ties, losses, invalid answers, and capped outputs remain in the [complete comparison table](results/reproduced/comparisons.md) and [17-arm ledger](results/reproduced/all_arms.csv).
 
-### Reconstruct the table on CPU
+The [machine-readable report](results/reproduced/summary.json) provides exact fractions, paired wins/losses, and descriptive 95% bootstrap intervals. The cohorts and configurations were selected during development; the intervals are not adjusted for that selection. Positive point differences alone are not significance claims.
+
+![All 17 development arms with accuracy and recorded deployment tokens](docs/assets/development-results.svg)
+
+### Reproduce the evidence on CPU
 
 From the repository root, using only Python's standard library:
 
 ```bash
+# Reconstruct every included outcome, control comparison, and cost component.
 python scripts/reproduce_results.py --output runs/reproduced
+
+# Check saved tables, README highlights, evidence bindings, and source integrity.
+python scripts/verify_release.py
 ```
 
-The command verifies the ledger, reconstructs all included arms, and writes JSON, CSV, and Markdown comparisons.
-It preserves incorrect, invalid, and truncated outcomes within each included arm.
-See the [saved outputs](results/reproduced/) and [experiment definitions](docs/EXPERIMENTS.md).
+The GPQA32 replay verifies **128 votes from 544 call observations representing 487 distinct cached requests**. Reused requests retain the same opaque ID; they are not counted as new physical calls. Opaque answer classes preserve equality and tie order without publishing benchmark questions, answers, or response text.
 
-> **What this reproduces:** the published aggregate accuracy, call counts, token accounting, and paired statistics from saved question-level correctness records.
-> It does not independently regrade response text or rerun the original target model.
-> Fresh training and generation use the separate workflows below and require their own data and fitted assets.
+> Saved-outcome reconstruction checks published numbers. GPQA32 additionally checks voting from already parsed answer classes. Neither independently re-parses or regrades response text, retrains a scorer, nor reruns a target model. **This release makes no new target calls.** See [experiment scope and exposure](docs/EXPERIMENTS.md) and [reproducibility levels](docs/REPRODUCIBILITY.md).
 
 ## Start here
 
 Use Python 3.11 or newer.
-The result command above needs no installation, GPU, API key, or network connection.
+The evidence commands above need no installation, GPU, API key, or network connection.
 For the library and examples:
 
 ```bash
+git clone https://github.com/sophiapple/Maze.git
+cd Maze
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e .
@@ -131,7 +158,8 @@ src/maze/                  Reusable planning, scorers, training, and model adapt
 src/maze_paper/            Independent equation and policy references
 configs/                   Scorer, allocation, and experiment definitions
 scripts/                   Reproduction, data preparation, calibration, and audits
-evidence/development/      Numeric question-level records and reference aggregates
+evidence/development/      Complete selected-cohort outcomes, vote records, and provenance
+evidence/paper/            Source-bound camera-ready table excerpts and transcription
 results/reproduced/        Reconstructed tables and statistics
 reproduction/compact/      Preserved compact-scorer replay implementations
 docs/                      Method, usage, experiment, and extension guides
