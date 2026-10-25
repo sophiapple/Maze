@@ -1,7 +1,7 @@
 """Maze: learn which prompt trajectory to execute before generation."""
 from importlib import import_module
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __all__ = ["Candidate", "RequestSlot", "allocate", "sample_paths", "NumpyEnergy", "EnergyConfig"]
 
 

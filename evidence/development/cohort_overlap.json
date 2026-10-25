@@ -1,0 +1,59 @@
+{
+  "basis": "Exact original query identities compared on the source host; no benchmark text exported. Cohorts use different banks/configurations and are not independent replications.",
+  "pairs": [
+    {
+      "gpqa32_v166": "q001",
+      "gpqa99_v206": "q001"
+    },
+    {
+      "gpqa32_v166": "q006",
+      "gpqa99_v206": "q013"
+    },
+    {
+      "gpqa32_v166": "q007",
+      "gpqa99_v206": "q014"
+    },
+    {
+      "gpqa32_v166": "q008",
+      "gpqa99_v206": "q019"
+    },
+    {
+      "gpqa32_v166": "q009",
+      "gpqa99_v206": "q020"
+    },
+    {
+      "gpqa32_v166": "q012",
+      "gpqa99_v206": "q040"
+    },
+    {
+      "gpqa32_v166": "q016",
+      "gpqa99_v206": "q055"
+    },
+    {
+      "gpqa32_v166": "q018",
+      "gpqa99_v206": "q061"
+    },
+    {
+      "gpqa32_v166": "q020",
+      "gpqa99_v206": "q067"
+    },
+    {
+      "gpqa32_v166": "q021",
+      "gpqa99_v206": "q070"
+    },
+    {
+      "gpqa32_v166": "q027",
+      "gpqa99_v206": "q089"
+    },
+    {
+      "gpqa32_v166": "q030",
+      "gpqa99_v206": "q095"
+    },
+    {
+      "gpqa32_v166": "q031",
+      "gpqa99_v206": "q097"
+    }
+  ],
+  "cohort_question_memberships": 163,
+  "distinct_source_question_ids": 150
+}

@@ -14,24 +14,43 @@
     "maze_paper.policies",
     "maze_paper.evidence"
   ],
-  "outcome_ledger_sha256": "6243acbae35f02b26fe9fde8b5be67b7fd5a1c28c40b07f1d8b72b7ab1fd9a14",
-  "reference_transform": "Publish the explicitly listed cohort/arm subsets. Preserve every original row byte-for-byte within each included arm, including incorrect and invalid outcomes. Remove aggregate-only result panels from the public results scope.",
+  "outcome_ledger_sha256": "2b291850668501c48ccfd1da2126e187313493627da8ff772c6d827023589dad",
+  "reference_transform": "Restore all 297 omitted GPQA99 control rows byte-for-byte in numeric content; retain all previous 789 rows unchanged. Add 128 closed GPQA32 deployment records and 544 opaque call observations; retain shared IDs and 13-question cross-cohort overlap.",
   "original_outcome_ledger_sha256": "4b220278fe3308b59656f5d06421be1ee8e1dc006d02914f0f6ef8634ae36c64",
   "included_arms": {
-    "gpqa99_v206": [
-      "Maze_SC3",
-      "Maze_one_call",
-      "Raw_one_call",
-      "Raw_MV2",
-      "Raw_MV3",
-      "Raw_MV4",
-      "Raw_MV8"
-    ],
     "mmlu32_v160": [
       "learned_best_SC3",
       "retrieval_SC3",
       "uniform_fixed_Raw_SC3"
+    ],
+    "gpqa99_v206": [
+      "Raw_one_call",
+      "Raw_MV2",
+      "Raw_MV3",
+      "Raw_MV4",
+      "Raw_MV8",
+      "uniform_Raw_SC3",
+      "Maze_one_call",
+      "Maze_SC3",
+      "retrieval_one_call",
+      "retrieval_SC3"
+    ],
+    "gpqa32_v166": [
+      "Maze_selected_SC3",
+      "retrieval_SC3",
+      "Raw_MV8",
+      "legacy_v108_SC3"
     ]
   },
-  "included_records": 789
+  "included_records": 1214,
+  "previous_release_outcome_ledger_sha256": "6243acbae35f02b26fe9fde8b5be67b7fd5a1c28c40b07f1d8b72b7ab1fd9a14",
+  "update_base": {
+    "repository": "https://github.com/sophiapple/Maze",
+    "revision": "f6cadf202c4b41fbb2ce142fdca9a4abd8a37922"
+  },
+  "additional_evidence_sha256": {
+    "evidence/development/gpqa32_vote_calls.jsonl": "6e8fa50b808936014e2334f08ed3abce8e10402c8a42f65a9699133887c178df",
+    "evidence/development/gpqa32_vote_reference.json": "b58a91295ef7af51ac910aad783027e700c5cc29c872999f3c98b11481bb523a",
+    "evidence/development/cohort_overlap.json": "259806b5d2885504880aab54ea186a8677d9c9f447ab9b4bf95cf2ec9a64ea94"
+  }
 }

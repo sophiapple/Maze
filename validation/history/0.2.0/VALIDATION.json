@@ -1,0 +1,95 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "state": "passed",
+  "scope": "CPU source, numerical reference, saved-outcome reconstruction, synthetic workflows, and local mock HTTP checks.",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "torch": "2.10.0+cpu",
+    "platform": "Linux",
+    "device": "cpu"
+  },
+  "tests": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "count": 71,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "log": "validation/unittest.txt"
+  },
+  "numerical_checks": [
+    "paper scalar: independent loop vs vectorized NumPy",
+    "NumPy vs differentiable PyTorch across three scorer families",
+    "compact vector vs preserved StructuredEnergyV118",
+    "full-QA vector vs preserved StructuredEnergyV126",
+    "residual calibration vs preserved v142 implementation"
+  ],
+  "evidence": {
+    "questions": 131,
+    "cohorts": 2,
+    "arms": 10,
+    "records": 789,
+    "selected_comparisons": 7,
+    "mode": "reconstruction from recorded numeric correctness and cost",
+    "fresh_target_generations": 0,
+    "independent_response_regrading": false
+  },
+  "not_executed": [
+    "Fresh benchmark encoder/model inference",
+    "Real-target generation or paid API calls",
+    "Training on real benchmark data",
+    "Hosted GitHub Actions",
+    "Remote repository creation or publication"
+  ],
+  "ci": "Workflow supplied; local tests above executed in Python 3.13.5 only. Other matrix versions await their own CI runs.",
+  "stdlib_reconstruction": {
+    "command": "python -S scripts/reproduce_results.py --output runs/reproduced",
+    "passed": true,
+    "third_party_packages_loaded": false,
+    "output_formats": [
+      "JSON",
+      "CSV",
+      "Markdown"
+    ]
+  },
+  "core_only_environment": {
+    "tests_discovered": 71,
+    "passed": 67,
+    "skipped_optional_torch": 4,
+    "errors": 0,
+    "failures": 0,
+    "log": "validation/unittest-core.txt"
+  },
+  "packaging": {
+    "wheel_build": "passed",
+    "source_distribution_build": "passed",
+    "wheel_install": "passed",
+    "wheel_cli": "passed",
+    "wheel_synthetic_demo": "passed",
+    "wheel_synthetic_training_demo": "passed",
+    "environment_note": "Installation used an isolated venv without network resolution. Optional training checks reused locally installed NumPy/PyTorch via PYTHONPATH; this is not a clean online dependency-resolution test."
+  },
+  "source_audit": {
+    "python_ast": "passed",
+    "relative_documentation_links": "passed",
+    "preserved_upstream_modules": 4,
+    "credential_pattern_scan": "no matching credential patterns; not a formal security audit"
+  },
+  "readme_preview": {
+    "images_loaded": 6,
+    "horizontal_overflow": false,
+    "format": "self-contained HTML plus PNG visual preview",
+    "inspection": "header, pipeline, result table, and lower sections inspected"
+  },
+  "archive_checks": {
+    "clean_extraction": "passed",
+    "stdlib_result_regeneration": "passed",
+    "all_three_saved_outputs_byte_identical": true,
+    "tests": 71,
+    "synthetic_plan_collect_grade": "passed",
+    "synthetic_train_export": "passed",
+    "git_index_tracks_only_intended_files": true,
+    "file_count": 100
+  }
+}

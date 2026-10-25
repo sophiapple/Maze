@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+Adds a closed GPQA32 vote reconstruction, restoring all GPQA99 controls while preserving the prior 789 numeric records. The public evidence now has 1,214 outcomes, 17 arms, and 21 named-control contrasts, with shared questions and cached calls explicitly accounted for. Adds source-bound transcription of all 15 October 20 camera-ready tables, a one-command release verifier, expanded integrity tests, and CI. No new benchmark generation, fitting, or independent regrading is claimed.
+
 ## 0.2.0
 
 A standalone project layout separates the reusable Maze library from experiment configurations and recorded evidence.

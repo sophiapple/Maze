@@ -1,0 +1,1506 @@
+{
+  "schema": 1,
+  "evidence_role": "author_reported_camera_ready",
+  "source_main_tex_sha256": "489de5afc295394e2497401607de671ea9185e585af6e26d01867f86b38d0f7a",
+  "table_count": 15,
+  "fresh_generation": false,
+  "independent_regrading": false,
+  "full_benchmark_replication": false,
+  "main_table_values": [
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Original",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "24.29"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Original",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "29.69"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Original",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "53.46"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Original",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "42.12"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Original",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "7.78"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "pFLAT",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "26.43"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "pFLAT",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "31.70"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "pFLAT",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "58.08"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "pFLAT",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "45.28"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "pFLAT",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "12.35"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "EASE",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "26.79"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "EASE",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "32.81"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "EASE",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "58.46"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "EASE",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "46.12"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "EASE",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "13.68"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Maze (Ours)",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "28.94"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Maze (Ours)",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "34.35"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Maze (Ours)",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "63.56"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Maze (Ours)",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "48.20"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "method": "Maze (Ours)",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "18.23"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Original",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "41.37"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Original",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "31.65"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Original",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "80.90"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Original",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "48.40"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Original",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "4.12"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "pFLAT",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "44.50"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "pFLAT",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "35.80"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "pFLAT",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "85.78"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "pFLAT",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "51.36"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "pFLAT",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "9.20"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "EASE",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "45.10"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "EASE",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "35.85"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "EASE",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "85.91"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "EASE",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "52.80"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "EASE",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "9.35"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "48.32"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "39.10"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "87.72"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "53.80"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "14.58"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Original",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "59.74"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Original",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "38.35"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Original",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "89.98"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Original",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "86.82"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Original",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "47.57"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "pFLAT",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "66.13"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "pFLAT",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "49.95"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "pFLAT",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "92.03"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "pFLAT",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "88.24"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "pFLAT",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "49.25"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "EASE",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "66.95"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "EASE",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "48.30"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "EASE",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "91.77"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "EASE",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "87.98"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "EASE",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "50.32"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "70.05"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "53.37"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "93.02"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "90.12"
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "method": "Maze (Ours)",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "53.21"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Majority vote",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "28.93"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Majority vote",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "37.28"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Majority vote",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "73.46"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Majority vote",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "48.25"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Majority vote",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "19.25"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Random oracle",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "35.00"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Random oracle",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "39.96"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Random oracle",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "80.38"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Random oracle",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "52.67"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "Random oracle",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "23.46"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "MultiMaze",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "37.25"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "MultiMaze",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "43.52"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "MultiMaze",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "84.39"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "MultiMaze",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "55.58"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "method": "MultiMaze",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "27.75"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Majority vote",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "53.53"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Majority vote",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "41.03"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Majority vote",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "93.05"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Majority vote",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "54.28"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Majority vote",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "15.65"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Random oracle",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "60.59"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Random oracle",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "46.15"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Random oracle",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "94.59"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Random oracle",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "56.76"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "Random oracle",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "17.82"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "MultiMaze",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "62.39"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "MultiMaze",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "51.48"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "MultiMaze",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "95.52"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "MultiMaze",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "60.52"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "method": "MultiMaze",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "21.68"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Majority vote",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "82.80"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Majority vote",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "54.32"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Majority vote",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "94.65"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Majority vote",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "92.30"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Majority vote",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "55.12"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Random oracle",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "85.98"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Random oracle",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "65.27"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Random oracle",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "95.72"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Random oracle",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "92.90"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "Random oracle",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "59.39"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "MultiMaze",
+      "benchmark": "MMLU-Pro",
+      "accuracy_percent_reported": "87.85"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "MultiMaze",
+      "benchmark": "GPQA",
+      "accuracy_percent_reported": "70.98"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "MultiMaze",
+      "benchmark": "GSM8K",
+      "accuracy_percent_reported": "95.82"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "MultiMaze",
+      "benchmark": "MATH500",
+      "accuracy_percent_reported": "95.06"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "method": "MultiMaze",
+      "benchmark": "AIME",
+      "accuracy_percent_reported": "61.30"
+    }
+  ],
+  "main_table_contrasts": [
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "28.94",
+      "control_accuracy_pct": "24.29",
+      "gain_pp": "4.65",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "28.94",
+      "control_accuracy_pct": "26.43",
+      "gain_pp": "2.51",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "28.94",
+      "control_accuracy_pct": "26.79",
+      "gain_pp": "2.15",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "34.35",
+      "control_accuracy_pct": "29.69",
+      "gain_pp": "4.66",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "34.35",
+      "control_accuracy_pct": "31.70",
+      "gain_pp": "2.65",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "34.35",
+      "control_accuracy_pct": "32.81",
+      "gain_pp": "1.54",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "63.56",
+      "control_accuracy_pct": "53.46",
+      "gain_pp": "10.10",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "63.56",
+      "control_accuracy_pct": "58.08",
+      "gain_pp": "5.48",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "63.56",
+      "control_accuracy_pct": "58.46",
+      "gain_pp": "5.10",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "48.20",
+      "control_accuracy_pct": "42.12",
+      "gain_pp": "6.08",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "48.20",
+      "control_accuracy_pct": "45.28",
+      "gain_pp": "2.92",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "48.20",
+      "control_accuracy_pct": "46.12",
+      "gain_pp": "2.08",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "18.23",
+      "control_accuracy_pct": "7.78",
+      "gain_pp": "10.45",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "18.23",
+      "control_accuracy_pct": "12.35",
+      "gain_pp": "5.88",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "18.23",
+      "control_accuracy_pct": "13.68",
+      "gain_pp": "4.55",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "48.32",
+      "control_accuracy_pct": "41.37",
+      "gain_pp": "6.95",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "48.32",
+      "control_accuracy_pct": "44.50",
+      "gain_pp": "3.82",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "48.32",
+      "control_accuracy_pct": "45.10",
+      "gain_pp": "3.22",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "39.10",
+      "control_accuracy_pct": "31.65",
+      "gain_pp": "7.45",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "39.10",
+      "control_accuracy_pct": "35.80",
+      "gain_pp": "3.30",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "39.10",
+      "control_accuracy_pct": "35.85",
+      "gain_pp": "3.25",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "87.72",
+      "control_accuracy_pct": "80.90",
+      "gain_pp": "6.82",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "87.72",
+      "control_accuracy_pct": "85.78",
+      "gain_pp": "1.94",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "87.72",
+      "control_accuracy_pct": "85.91",
+      "gain_pp": "1.81",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "53.80",
+      "control_accuracy_pct": "48.40",
+      "gain_pp": "5.40",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "53.80",
+      "control_accuracy_pct": "51.36",
+      "gain_pp": "2.44",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "53.80",
+      "control_accuracy_pct": "52.80",
+      "gain_pp": "1.00",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "14.58",
+      "control_accuracy_pct": "4.12",
+      "gain_pp": "10.46",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "14.58",
+      "control_accuracy_pct": "9.20",
+      "gain_pp": "5.38",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "14.58",
+      "control_accuracy_pct": "9.35",
+      "gain_pp": "5.23",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "70.05",
+      "control_accuracy_pct": "59.74",
+      "gain_pp": "10.31",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "70.05",
+      "control_accuracy_pct": "66.13",
+      "gain_pp": "3.92",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "70.05",
+      "control_accuracy_pct": "66.95",
+      "gain_pp": "3.10",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "53.37",
+      "control_accuracy_pct": "38.35",
+      "gain_pp": "15.02",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "53.37",
+      "control_accuracy_pct": "49.95",
+      "gain_pp": "3.42",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GPQA",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "53.37",
+      "control_accuracy_pct": "48.30",
+      "gain_pp": "5.07",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "93.02",
+      "control_accuracy_pct": "89.98",
+      "gain_pp": "3.04",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "93.02",
+      "control_accuracy_pct": "92.03",
+      "gain_pp": "0.99",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "GSM8K",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "93.02",
+      "control_accuracy_pct": "91.77",
+      "gain_pp": "1.25",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "90.12",
+      "control_accuracy_pct": "86.82",
+      "gain_pp": "3.30",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "90.12",
+      "control_accuracy_pct": "88.24",
+      "gain_pp": "1.88",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "MATH500",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "90.12",
+      "control_accuracy_pct": "87.98",
+      "gain_pp": "2.14",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "Original",
+      "method_accuracy_pct": "53.21",
+      "control_accuracy_pct": "47.57",
+      "gain_pp": "5.64",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "pFLAT",
+      "method_accuracy_pct": "53.21",
+      "control_accuracy_pct": "49.25",
+      "gain_pp": "3.96",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:single_call_results",
+      "model": "Qwen3-8B",
+      "benchmark": "AIME",
+      "method": "Maze (Ours)",
+      "control": "EASE",
+      "method_accuracy_pct": "53.21",
+      "control_accuracy_pct": "50.32",
+      "gain_pp": "2.89",
+      "target_calls": 1,
+      "control_calls": 1
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MMLU-Pro",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "37.25",
+      "control_accuracy_pct": "28.93",
+      "gain_pp": "8.32",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GPQA",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "43.52",
+      "control_accuracy_pct": "37.28",
+      "gain_pp": "6.24",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "GSM8K",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "84.39",
+      "control_accuracy_pct": "73.46",
+      "gain_pp": "10.93",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "MATH500",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "55.58",
+      "control_accuracy_pct": "48.25",
+      "gain_pp": "7.33",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Mistral-7B",
+      "benchmark": "AIME",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "27.75",
+      "control_accuracy_pct": "19.25",
+      "gain_pp": "8.50",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MMLU-Pro",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "62.39",
+      "control_accuracy_pct": "53.53",
+      "gain_pp": "8.86",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GPQA",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "51.48",
+      "control_accuracy_pct": "41.03",
+      "gain_pp": "10.45",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "GSM8K",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "95.52",
+      "control_accuracy_pct": "93.05",
+      "gain_pp": "2.47",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "MATH500",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "60.52",
+      "control_accuracy_pct": "54.28",
+      "gain_pp": "6.24",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "LLaMA3-8B",
+      "benchmark": "AIME",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "21.68",
+      "control_accuracy_pct": "15.65",
+      "gain_pp": "6.03",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "benchmark": "MMLU-Pro",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "87.85",
+      "control_accuracy_pct": "82.80",
+      "gain_pp": "5.05",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "benchmark": "GPQA",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "70.98",
+      "control_accuracy_pct": "54.32",
+      "gain_pp": "16.66",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "benchmark": "GSM8K",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "95.82",
+      "control_accuracy_pct": "94.65",
+      "gain_pp": "1.17",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "benchmark": "MATH500",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "95.06",
+      "control_accuracy_pct": "92.30",
+      "gain_pp": "2.76",
+      "target_calls": 16,
+      "control_calls": 32
+    },
+    {
+      "table": "tab:multi_call_results",
+      "model": "Qwen3-14B",
+      "benchmark": "AIME",
+      "method": "MultiMaze",
+      "control": "Majority vote",
+      "method_accuracy_pct": "61.30",
+      "control_accuracy_pct": "55.12",
+      "gain_pp": "6.18",
+      "target_calls": 16,
+      "control_calls": 32
+    }
+  ],
+  "summaries": [
+    {
+      "table": "tab:single_call_results",
+      "control": "Original",
+      "cells": 15,
+      "positive_cells": 15,
+      "gain_min_pp": "3.04",
+      "gain_max_pp": "15.02",
+      "gain_mean_pp": "7.355333333333333333333333333"
+    },
+    {
+      "table": "tab:single_call_results",
+      "control": "pFLAT",
+      "cells": 15,
+      "positive_cells": 15,
+      "gain_min_pp": "0.99",
+      "gain_max_pp": "5.88",
+      "gain_mean_pp": "3.366"
+    },
+    {
+      "table": "tab:single_call_results",
+      "control": "EASE",
+      "cells": 15,
+      "positive_cells": 15,
+      "gain_min_pp": "1.00",
+      "gain_max_pp": "5.23",
+      "gain_mean_pp": "2.958666666666666666666666667"
+    },
+    {
+      "table": "tab:multi_call_results",
+      "control": "Majority vote",
+      "cells": 15,
+      "positive_cells": 15,
+      "gain_min_pp": "1.17",
+      "gain_max_pp": "16.66",
+      "gain_mean_pp": "7.146"
+    }
+  ]
+}

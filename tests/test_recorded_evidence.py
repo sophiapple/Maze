@@ -14,9 +14,9 @@ class RecordedEvidenceTests(unittest.TestCase):
         cls.ref=json.loads((ROOT/'evidence/development/reference.json').read_text())
 
     def test_all_included_arms_match_reference(self):
-        self.assertEqual(len(self.rows),789)
+        self.assertEqual(len(self.rows),1214)
         v=aggregate(self.rows)
-        self.assertEqual(sum(map(len,v.values())),10)
+        self.assertEqual(sum(map(len,v.values())),17)
         self.assertTrue(verify_reference(v,self.ref))
 
     def test_retains_every_question_in_each_included_arm(self):
@@ -54,7 +54,20 @@ class RecordedEvidenceTests(unittest.TestCase):
         expected={'gpqa-one-vs-raw':'1/33','gpqa-one-vs-mv2':'2/99',
                   'gpqa-sc3-vs-mv3':'5/99','gpqa-sc3-vs-mv4':'2/99','gpqa-sc3-vs-mv8':'2/99',
                   'mmlu-sc3-vs-retrieval':'1/32','mmlu-sc3-vs-random':'1/8'}
-        self.assertEqual({r['id']:r['gain_exact'] for r in report['comparisons']},expected)
+        contrasts={r['id']:r['gain_exact'] for r in report['comparisons']}
+        self.assertEqual({k:contrasts[k] for k in expected},expected)
+        self.assertEqual(contrasts['gpqa32-vs-retrieval_SC3'],'1/8')
+        self.assertEqual(contrasts['gpqa32-vs-Raw_MV8'],'1/16')
+        self.assertEqual(report['comparison_count'],21)
+        self.assertEqual(report['unique_questions'],150)
+        self.assertEqual(report['cohort_question_memberships'],163)
+        self.assertEqual(report['shared_gpqa_question_ids'],13)
+        self.assertTrue(any(r['gain_pp']<0 for r in report['comparisons']))
+        self.assertTrue(any(r['gain_pp']==0 for r in report['comparisons']))
         self.assertFalse(report['fresh_generation']);self.assertFalse(report['independent_regrading'])
         published=json.loads((ROOT/'results/reproduced/summary.json').read_text())
         self.assertEqual(report,published)
+
+    def test_missing_entire_cohort_rejected(self):
+        rows=[r for r in self.rows if r['cohort']!='gpqa32_v166']
+        with self.assertRaises(ValueError):verify_reference(aggregate(rows),self.ref)

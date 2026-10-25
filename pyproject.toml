@@ -4,14 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "maze-research"
-version = "0.2.0"
+version = "0.2.1"
 description = "Prompt-trajectory planning for efficient language-model reasoning"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{name = "Maze contributors"}]
-dependencies = ["numpy>=1.26,<3"]
+dependencies = [
+  "numpy>=1.26,<3",
+  "numpy<2; platform_system == 'Darwin' and platform_machine == 'x86_64'",
+]
 keywords = ["test-time-scaling", "reasoning", "prompt-optimization", "in-context-learning"]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -20,6 +23,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
+plot = ["matplotlib>=3.8,<4"]
 train = ["torch>=2.2,<3"]
 encoder = ["torch>=2.2,<3", "transformers>=4.51,<6", "safetensors>=0.4"]
 
@@ -28,6 +32,8 @@ maze = "maze.cli:main"
 
 [project.urls]
 Paper = "https://openreview.net/forum?id=e22Krci8Dn"
+Repository = "https://github.com/sophiapple/Maze"
+Issues = "https://github.com/sophiapple/Maze/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

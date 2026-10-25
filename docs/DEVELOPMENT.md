@@ -54,4 +54,4 @@ Preserved scorer files are kept under `reproduction/compact/` and bound to their
 Modify the reusable implementation, not the preserved copy, when adding new behavior.
 Version experiment configurations separately from the Python API.
 Update the result manifest only after reviewing a deliberate data or configuration change.
-See [publishing](PUBLISHING.md) for creating an independent repository under a new account.
+See [publishing](PUBLISHING.md) for checking and publishing a versioned Maze release.

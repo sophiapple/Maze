@@ -8,7 +8,7 @@ import json
 import re
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-EXCLUDED={'.git','.venv','venv','__pycache__','.pytest_cache','runs','build','dist'}
+EXCLUDED={'.git','.venv','venv','__pycache__','.pytest_cache','runs','build','dist','.DS_Store'}
 ROOT_FILES={'README.md','LICENSE','CITATION.cff','THIRD_PARTY_NOTICES.md','CONTRIBUTING.md','SECURITY.md',
             'CHANGELOG.md','MANIFEST.in','pyproject.toml','requirements-cpu.txt','.gitignore','.gitattributes'}
 ROOT_DIRS={'src','configs','docs','scripts','tests','examples','evidence','results','provenance','validation','reproduction','.github'}
@@ -24,6 +24,9 @@ def files():
         if rel.parts[0] in {'data','checkpoints'} or rel.parts[:2]==('configs','local'):continue
         if any(p in EXCLUDED or p.endswith('.egg-info') for p in rel.parts):continue
         if not path.is_file() or path.suffix in {'.pyc','.pyo'}:continue
+        # Setuptools adds these at the sdist root; they are packaging metadata,
+        # not source files covered by MANIFEST.json. Do not ignore nested names.
+        if rel.as_posix() in {'PKG-INFO','setup.cfg'}:continue
         if rel.as_posix()=='MANIFEST.json':continue
         if rel.parts[0] not in ROOT_FILES|ROOT_DIRS:raise ValueError(f'Unexpected root artifact: {rel}')
         result.append(path)

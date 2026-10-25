@@ -1,0 +1,13 @@
+{
+  "cohort": "gpqa32_v166",
+  "display": "GPQA32 (post hoc)",
+  "target": "Qwen3.5-4B",
+  "thinking": false,
+  "shots": 4,
+  "policy": "Fixed v121 four-head selected prompt, three distinct requests and one majority vote; post-hoc operating point of the v134 cache. Legacy v108 planner retained.",
+  "reproduction": "saved_vote_and_numeric_outcome_reconstruction",
+  "inputs": "evidence/development/outcomes.jsonl",
+  "calls": "evidence/development/gpqa32_vote_calls.jsonl",
+  "overlap": "13 source question IDs shared with GPQA99; no pooling or independent-replication claim",
+  "fresh_generation_assets": "Original bank, features, checkpoints and response text are not bundled."
+}

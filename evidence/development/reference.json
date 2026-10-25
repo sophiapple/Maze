@@ -7,7 +7,7 @@
   "cohorts": [
     {
       "id": "mmlu32_v160",
-      "display": "MMLU-Pro \u00b7 32 questions",
+      "display": "MMLU-Pro · 32 questions",
       "benchmark": "mmlu_pro",
       "questions": 32,
       "data_role": "development_cohort",
@@ -62,7 +62,7 @@
     },
     {
       "id": "gpqa99_v206",
-      "display": "GPQA Diamond \u00b7 99 questions",
+      "display": "GPQA Diamond · 99 questions",
       "benchmark": "gpqa",
       "questions": 99,
       "data_role": "representative_development_cohort",
@@ -135,6 +135,19 @@
           "complete_serving_cost": null,
           "complete_training_cost": null
         },
+        "uniform_Raw_SC3": {
+          "accuracy_exact": "71/99",
+          "calls": 3,
+          "processed_tokens_exact": "1636687/99",
+          "invalid_calls": 3,
+          "truncated_calls": 3,
+          "target_input_tokens": 5974.878787878788,
+          "target_output_tokens": 10557.31313131313,
+          "query_encoder_tokens": 0.0,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        },
         "Maze_one_call": {
           "accuracy_exact": "65/99",
           "calls": 1,
@@ -160,15 +173,245 @@
           "end_to_end_latency": null,
           "complete_serving_cost": null,
           "complete_training_cost": null
+        },
+        "retrieval_one_call": {
+          "accuracy_exact": "8/11",
+          "calls": 1,
+          "processed_tokens_exact": "584480/99",
+          "invalid_calls": 0,
+          "truncated_calls": 0,
+          "target_input_tokens": 2212.838383838384,
+          "target_output_tokens": 3478.1717171717173,
+          "query_encoder_tokens": 212.82828282828282,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        },
+        "retrieval_SC3": {
+          "accuracy_exact": "71/99",
+          "calls": 3,
+          "processed_tokens_exact": "159047/9",
+          "invalid_calls": 3,
+          "truncated_calls": 3,
+          "target_input_tokens": 6638.515151515152,
+          "target_output_tokens": 10820.545454545454,
+          "query_encoder_tokens": 212.82828282828282,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
         }
       },
       "estimator": "one actual vote per question; SC3 repeats one whole prompt, Raw MV3 uses three distinct uniform Raw prompts",
       "source": "reports/gpqa_registered_analysis_v206/summary.json",
       "policy": "v179 four frozen success heads/equal mean; v191 registered endpoints",
-      "offline_bank_tokens": 52801
+      "offline_bank_tokens": 52801,
+      "uncertainty": {
+        "Maze_SC3_vs_Raw_MV3": {
+          "role": "primary",
+          "questions": 99,
+          "gain": 0.050505050505050504,
+          "exact_gain": "5/99",
+          "descriptive_question_bootstrap95": [
+            -0.020202020202020204,
+            0.12121212121212122
+          ],
+          "processed_token_ratio": 1.015715272905293,
+          "exact_processed_token_ratio": "574711/565819",
+          "rescues": 9,
+          "harms": 4,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_SC3_vs_uniform_Raw_SC3": {
+          "role": "primary",
+          "questions": 99,
+          "gain": 0.0,
+          "exact_gain": "0",
+          "descriptive_question_bootstrap95": [
+            -0.0707070707070707,
+            0.0707070707070707
+          ],
+          "processed_token_ratio": 1.0534286641245394,
+          "exact_processed_token_ratio": "1724133/1636687",
+          "rescues": 7,
+          "harms": 7,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_one_call_vs_Raw_one_call": {
+          "role": "primary",
+          "questions": 99,
+          "gain": 0.030303030303030304,
+          "exact_gain": "1/33",
+          "descriptive_question_bootstrap95": [
+            -0.06060606060606061,
+            0.12121212121212122
+          ],
+          "processed_token_ratio": 1.0583537470060451,
+          "exact_processed_token_ratio": "582828/550693",
+          "rescues": 12,
+          "harms": 9,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_SC3_vs_Raw_MV8": {
+          "role": "secondary",
+          "questions": 99,
+          "gain": 0.020202020202020204,
+          "exact_gain": "2/99",
+          "descriptive_question_bootstrap95": [
+            -0.04040404040404041,
+            0.08080808080808081
+          ],
+          "processed_token_ratio": 0.37582412264697534,
+          "exact_processed_token_ratio": "574711/1529202",
+          "rescues": 6,
+          "harms": 4,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_SC3_vs_retrieval_SC3": {
+          "role": "secondary",
+          "questions": 99,
+          "gain": 0.0,
+          "exact_gain": "0",
+          "descriptive_question_bootstrap95": [
+            -0.0707070707070707,
+            0.0707070707070707
+          ],
+          "processed_token_ratio": 0.9854908526181798,
+          "exact_processed_token_ratio": "1724133/1749517",
+          "rescues": 6,
+          "harms": 6,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_one_call_vs_retrieval_one_call": {
+          "role": "secondary",
+          "questions": 99,
+          "gain": -0.0707070707070707,
+          "exact_gain": "-7/99",
+          "descriptive_question_bootstrap95": [
+            -0.16161616161616163,
+            0.010101010101010102
+          ],
+          "processed_token_ratio": 0.9971735559813851,
+          "exact_processed_token_ratio": "145707/146120",
+          "rescues": 6,
+          "harms": 13,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_SC3_vs_Raw_MV2": {
+          "role": "secondary",
+          "questions": 99,
+          "gain": 0.08080808080808081,
+          "exact_gain": "8/99",
+          "descriptive_question_bootstrap95": [
+            0.0,
+            0.16161616161616163
+          ],
+          "processed_token_ratio": 1.4976572679418356,
+          "exact_processed_token_ratio": "574711/383740",
+          "rescues": 13,
+          "harms": 5,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        },
+        "Maze_SC3_vs_Raw_MV4": {
+          "role": "secondary",
+          "questions": 99,
+          "gain": 0.020202020202020204,
+          "exact_gain": "2/99",
+          "descriptive_question_bootstrap95": [
+            -0.050505050505050504,
+            0.09090909090909091
+          ],
+          "processed_token_ratio": 0.7618369458881211,
+          "exact_processed_token_ratio": "1724133/2263126",
+          "rescues": 8,
+          "harms": 6,
+          "source_order_votes_without_replacement": true,
+          "causal_ordering_claim": false
+        }
+      }
+    },
+    {
+      "id": "gpqa32_v166",
+      "display": "GPQA · 32 questions",
+      "benchmark": "gpqa",
+      "questions": 32,
+      "data_role": "selected_posthoc_cached_development_operating_point",
+      "maze_arm": "Maze_selected_SC3",
+      "comparison_arm": "retrieval_SC3",
+      "comparison_label": "Retrieval SC3",
+      "arms": {
+        "Maze_selected_SC3": {
+          "accuracy_exact": "13/16",
+          "calls": 3,
+          "processed_tokens_exact": "627053/32",
+          "invalid_calls": 0,
+          "truncated_calls": 0,
+          "target_input_tokens": 8531.90625,
+          "target_output_tokens": 10839.0,
+          "query_encoder_tokens": 224.5,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        },
+        "retrieval_SC3": {
+          "accuracy_exact": "11/16",
+          "calls": 3,
+          "processed_tokens_exact": "502523/32",
+          "invalid_calls": 1,
+          "truncated_calls": 1,
+          "target_input_tokens": 5049.375,
+          "target_output_tokens": 10429.96875,
+          "query_encoder_tokens": 224.5,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        },
+        "Raw_MV8": {
+          "accuracy_exact": "3/4",
+          "calls": 8,
+          "processed_tokens_exact": "1409531/32",
+          "invalid_calls": 0,
+          "truncated_calls": 0,
+          "target_input_tokens": 15230.78125,
+          "target_output_tokens": 28817.0625,
+          "query_encoder_tokens": 0.0,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        },
+        "legacy_v108_SC3": {
+          "accuracy_exact": "11/16",
+          "calls": 3,
+          "processed_tokens_exact": "553693/32",
+          "invalid_calls": 1,
+          "truncated_calls": 1,
+          "target_input_tokens": 6527.0625,
+          "target_output_tokens": 10551.34375,
+          "query_encoder_tokens": 224.5,
+          "end_to_end_latency": null,
+          "complete_serving_cost": null,
+          "complete_training_cost": null
+        }
+      },
+      "estimator": "one fixed majority vote over three distinct actual same-prompt requests per question",
+      "source": "reports/gpqa_frozen_repeat_v166/summary.json",
+      "policy": "v121 frozen four-head equal-weight prompt choice; v166 SC3",
+      "offline_bank_tokens": 46555,
+      "uncertainty": [
+        0.03125,
+        0.25
+      ],
+      "legacy_control_note": "legacy_v108_SC3 reconstructs the earlier input-side planner from all three archived calls; it is an additional disclosed control, not the v121 selected policy.",
+      "overlap_with_gpqa99": 13
     }
   ],
   "complete_project_cost": null,
   "end_to_end_latency": null,
-  "scope": "Selected development-cohort experiments; all questions and outcomes in each included arm are retained. Each comparison is conditional on its named cohort, not an independent or exhaustive benchmark evaluation."
+  "scope": "Three selected development cohorts; all questions and declared controls retained. GPQA32 and GPQA99 share 13 source IDs. These are not full benchmarks or independent confirmation. No new collection in this release."
 }

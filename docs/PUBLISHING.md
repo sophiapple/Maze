@@ -1,44 +1,24 @@
-# Publishing under a new GitHub account
+# Maze release workflow
 
-This tree is independent of the previous repository.
-It contains no Git history, remotes, credentials, or account-specific workflow secrets.
-The previous source origin is retained only for attribution and traceability.
+The canonical project is [sophiapple/Maze](https://github.com/sophiapple/Maze). This is one integrated source repository: library, paper references, recorded experiments, documentation, and CI are versioned together. Experiment identities remain stable across software releases.
 
-## Before publishing
-
-Run the result reconstruction, tests, and source audit.
-Review the README result scope and asset-access description.
-Choose the intended owner and repository name, for example `YOUR_ACCOUNT/Maze`.
-Keep the code license and source attributions.
-Do not add the original update packet or private working directories to the public repository.
-
-## Create and push
-
-From this source tree, after authenticating GitHub CLI to the new account:
+## Validate a release
 
 ```bash
-git init -b main
-git add .
-git commit -m "Initialize Maze project"
-gh repo create YOUR_ACCOUNT/Maze --public --source=. --remote=origin --push
+python -m pip install -e '.[train]' build
+python scripts/verify_release.py
+python -m unittest discover -s tests -v
+python -m build
 ```
 
-The commit uses your configured Git identity.
-No command in the source tree creates a repository or pushes automatically.
-The README uses relative project links, so it does not depend on a guessed new account name.
-After publication, add the repository URL to your package metadata, citation metadata, and paper code-availability statement.
-Set the GitHub description to:
+Review any intentional source changes before running `python scripts/audit_repository.py --write-manifest`. That command refreshes integrity metadata, not scientific outcomes. The normal verifier rejects a stale manifest.
 
-> Prompt-trajectory planning for efficient LLM reasoning. Maze methods, variants, reproducible experiments, and deployment tools.
+The source distribution includes all evidence and commands needed for offline reconstruction. Extract it into a clean directory and run `python scripts/verify_release.py` there. The wheel installs the library and CLI; use the repository or source distribution for the bundled experiment records.
 
-Suggested topics: `test-time-scaling`, `llm-reasoning`, `in-context-learning`, `prompt-optimization`, `neurips-2026`, `reproducible-research`.
+## Publish through review
 
-## Maintain a project, not a single-paper snapshot
+Create a branch in the repository or a fork, commit the reviewed source, and open a pull request against `main`. Review CI and the generated tables before merging. A PR does not imply a tagged release. Keep API credentials, benchmark text, raw responses, private checkpoints, build directories, and research workspaces outside Git.
 
-Use normal versioned releases for source changes and stable experiment identifiers for measurements.
-A release can support multiple research milestones without rewriting an earlier result record.
-Publish large authorized trained assets separately when available, with their configurations and access conditions.
-Keep source, datasets, and checkpoint permissions explicit.
+GitHub Actions uses read-only repository permissions. It verifies recorded outcomes, paper transcription, numerical parity, and the source distribution on CPU. It does not make model API calls. Optional real benchmarks require separately supplied authorized assets and a frozen experiment protocol.
 
-The included GitHub Actions workflow has read-only repository permissions and needs no model API key.
-It reconstructs the numeric evidence and runs CPU tests; it never launches an external language model.
+Preserve the code license, model/dataset terms, source attributions, exact experiment identities, all included controls, and cost scope. Publish authorized large assets separately with hashes and configurations when available. Software versioning must not turn historical development data into new independent replication.
