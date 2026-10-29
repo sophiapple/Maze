@@ -36,6 +36,7 @@ def main():
         raise ValueError('Missing or duplicate README evidence markers')
     if readme.split(begin)[1].split(end)[0].strip() != table(report, highlights=True).strip():
         raise ValueError('README highlights differ from reconstructed evidence')
+    subprocess.run([sys.executable, str(ROOT/'scripts/check_memory_highlights.py')], check=True)
     subprocess.run([sys.executable, str(ROOT/'scripts/audit_repository.py')], check=True)
     print(json.dumps({'state':'passed', 'outcomes':report['records'],
         'arms':report['arm_count'], 'comparisons':report['comparison_count'],

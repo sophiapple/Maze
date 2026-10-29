@@ -1,5 +1,8 @@
 # The Maze method
 
+This page describes the geometric prompt-trajectory method and its scorer configurations.
+[Compact-memory and adaptive-inference variants](COMPACT_MEMORY.md) remain within the Maze project, with their changed selection, representation and stopping choices identified separately.
+
 Maze separates three decisions: which exemplar path to consider, how to score the complete path, and how to spend the generation budget after selection.
 The target model is fixed.
 A separate encoder supplies the representations used by the planner.
