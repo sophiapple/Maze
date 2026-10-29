@@ -6,7 +6,7 @@
     <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT license"></a>
     <a href="CHANGELOG.md"><img src="docs/assets/badge-version.svg" alt="Version 0.2.1"></a>
   </p>
-  <p><a href="#the-idea">The idea</a> · <a href="#measured-results">Results</a> · <a href="#start-here">Get started</a> · <a href="docs/USAGE.md">Run Maze</a> · <a href="docs/DEVELOPMENT.md">Build on Maze</a> · <a href="#citation">Cite</a></p>
+  <p><a href="#the-idea">The idea</a> · <a href="#measured-results">Results</a> · <a href="#compact-memory-and-adaptive-inference">Memory variants</a> · <a href="#start-here">Get started</a> · <a href="docs/USAGE.md">Run Maze</a> · <a href="docs/DEVELOPMENT.md">Build on Maze</a> · <a href="#citation">Cite</a></p>
 </div>
 
 **Maze learns which prompt trajectory to execute before asking a language model to reason.**
@@ -15,6 +15,7 @@ The target remains a text-in, text-out model: no target weights, gradients, or h
 
 This is the home of the **Maze project**, spanning the NeurIPS 2026 method, compact scorer variants, inference policies, and reusable experimentation tools.
 The library, experiment configurations, and result records are separated so that new models and applications can be added without changing existing experiments.
+[Compact-memory and adaptive-inference variants](docs/COMPACT_MEMORY.md) extend this same Maze family; their changed selection/stopping rules and new exploratory measurements are distinguished from the NeurIPS method and paper results.
 
 ## The idea
 
@@ -74,6 +75,34 @@ python scripts/verify_release.py
 The GPQA32 replay verifies **128 votes from 544 call observations representing 487 distinct cached requests**. Reused requests retain the same opaque ID; they are not counted as new physical calls. Opaque answer classes preserve equality and tie order without publishing benchmark questions, answers, or response text.
 
 > Saved-outcome reconstruction checks published numbers. GPQA32 additionally checks voting from already parsed answer classes. Neither independently re-parses or regrades response text, retrains a scorer, nor reruns a target model. **This release makes no new target calls.** See [experiment scope and exposure](docs/EXPERIMENTS.md) and [reproducibility levels](docs/REPRODUCIBILITY.md).
+
+## Compact-memory and adaptive-inference
+
+**Maze can also reuse compact trajectory memories and adapt the number of inference calls to answer agreement.** Repeated decoding of selected support follows the MultiMaze allocation idea; compact excerpts, source-competence selection and agreement stopping define the research variant described in [the method comparison](docs/COMPACT_MEMORY.md#relationship-to-neurips-maze). It remains part of Maze and is not an equation-equivalent implementation of the paper's learned geometric scorer.
+
+Selected positive observations on **Qwen3.5-9B**:
+
+<!-- BEGIN COMPACT MEMORY HIGHLIGHTS -->
+| Panel | Maze variant | Correct / questions | Cached control | Control correct / questions | Fewer simulated target tokens |
+|---|---|---:|---|---:|---:|
+| MMLU-Pro64 | Repeated primary | **58/64** | Raw3 | 56/64 | **23.56%** |
+| MMLU-Pro64 | Repeated primary | **58/64** | Raw8 | 56/64 | **70.61%** |
+| BBEH43 | Support switch | **16/43** | Raw3 | 15/43 | **11.17%** |
+| BBEH43 | Role-repeat (conditional mean) | **16.5/43 (mean)** | Raw3 | 15/43 | **4.62%** |
+| Full exposed panel171 | Benchmark portfolio (conditional mean) | **119.5/171 (mean)** | Raw3 | 116/171 | **15.07%** |
+| Full exposed panel171 | Benchmark portfolio (conditional mean) | **119.5/171 (mean)** | Raw8 | 119/171 | **68.87%** |
+<!-- END COMPACT MEMORY HIGHLIGHTS -->
+
+**Scope.** These are exposed exploratory highlights, not a complete leaderboard or independent confirmation. The parent MMLU-Pro panel has four science/math categories. Role-repeat's two BBEH scores are 17 and 16; only 15 scarcity cases have fresh second/third responses. The portfolio scores 120 and 119 using an outcome-informed rule (GPQA: Raw adaptive; MMLU-Pro/BBEH: role-repeat); 156 cached questions repeat across its conditional replicates. The two comparator rows for one policy share the same observations. These numbers are not experiments reported in the NeurIPS paper.
+
+**Costs and comparisons.** Savings include simulated consumed-prefix target input/output tokens and all prompt rereads. Source, encoder, tokenizer, planner and audit costs are additional. They are not physical-call or measured latency savings. Raw adaptive remains cheaper, and the BBEH memory points do not surpass cached Raw8. Seed-sensitive follow-ups and unadjusted uncertainty limit stronger claims. See [scope, intervals and complete cost definitions](docs/COMPACT_MEMORY.md#selected-positive-comparisons).
+
+```bash
+# Verify the selected aggregate arithmetic and its displayed tables on CPU.
+python scripts/check_memory_highlights.py
+```
+
+This check uses the [published aggregate highlights](evidence/highlights/compact_memory.json); it does not replay private responses, reconstruct question-level outcomes or recompute confidence intervals. The study runner and private research archives are not part of this documentation preview. The existing library and earlier evidence-reproduction commands remain available unchanged.
 
 ## Start here
 

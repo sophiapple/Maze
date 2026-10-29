@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "as_of": "2026-10-29",
+  "model": "Qwen3.5-9B",
+  "scope": "Selected positive exploratory comparisons, not a complete evaluation inventory or an independent confirmation.",
+  "project": "Maze",
+  "variant": "compact-memory and adaptive-inference",
+  "paper_equivalence": "Maze-family extension; not an equation-equivalent reproduction or a result reported in the NeurIPS paper.",
+  "token_scope": "Simulated consumed-prefix target input plus output, including full prompt rereads. Source, encoder, tokenizer, planner, parser and audit overhead are additional. Not measured latency, monetary savings or physically avoided calls.",
+  "uncertainty": "Previously computed unadjusted paired question-cluster bootstrap intervals, with conditional replicates kept together. Not adjusted for outcome-informed search. Aggregate records cannot reconstruct these intervals.",
+  "reproducibility": "Arithmetic and public-table consistency only. Source hashes bind private completed summaries; source records and question-level research archives are not distributed. No target generation, voting replay, regrading or independent audit is supplied by this highlight file.",
+  "cohorts": {
+    "MMLU-Pro64": "64 exposed science/math questions across four categories; repeated-primary selected for emphasis after outcomes.",
+    "BBEH43": "43 exposed questions across 21 categories. Role study refreshes only 15 input-defined scarcity cases; all other questions remain cached.",
+    "Full exposed panel171": "GPQA64 + MMLU-Pro64 + BBEH43. One benchmark rule selected after earlier outcomes; 156 questions duplicate cached observations across conditional replicates. Cached controls are not new matched-seed replications."
+  },
+  "qualifications": [
+    "Gains are comparator-specific. Raw adaptive remains cheaper on the highlighted panels; BBEH memory points do not establish superiority over Raw8.",
+    "Matched-seed follow-ups show seed sensitivity and do not establish a consistent advantage over matched Raw continuation.",
+    "Role-repeat improves only one fresh scarcity-case answer in one of two conditional replicates; role/no-gate aliases provide no gate-specific efficacy contrast.",
+    "The portfolio uses Raw adaptive on GPQA and role-repeat on MMLU-Pro/BBEH; it is an outcome-informed synthesis, not a universally learned router or a fresh full-panel result.",
+    "No neural causality, broad superiority or statistical confirmation follows from these highlights."
+  ],
+  "research_cost_context": {
+    "completed_target_calls": 3331,
+    "completed_target_tokens": 16529625,
+    "source_parent_observations": 2106,
+    "source_parent_tokens": 14162433,
+    "new_encoded_queries": 296,
+    "encoder_forwards": 4406,
+    "encoder_tokens": 228752,
+    "encoder_wall_seconds": 59.7738,
+    "amortization": "Only over an explicitly stated future-query count. GPU tariff and some historical overhead remain unresolved. Later ongoing collection is separate and has no result in this export."
+  },
+  "rows": [
+    {
+      "id": "mmlu_repeat_raw3",
+      "cohort": "MMLU-Pro64",
+      "questions": 64,
+      "policy": "repeated_primary_adaptive3",
+      "label": "Repeated primary",
+      "correct_by_conditional_replicate": [
+        58
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        4457.109375
+      ],
+      "comparator": "raw3",
+      "comparator_correct": 56,
+      "comparator_mean_tokens": 5830.6875,
+      "mean_logical_consumed_calls": 2.09375,
+      "comparator_logical_calls": 3.0,
+      "accuracy_gain_ci95_pp": [
+        0.0,
+        7.8125
+      ],
+      "source_record": "parent",
+      "source_sha256": "0159c34133382ed3200343a2366c3023e76746333fb727c02cf851dd9b4193c0",
+      "interval_source_sha256": "f291e801dc1af793a1c1301f8059bfb780e6f3b340eeabd200827f1e227ab147"
+    },
+    {
+      "id": "mmlu_repeat_raw8",
+      "cohort": "MMLU-Pro64",
+      "questions": 64,
+      "policy": "repeated_primary_adaptive3",
+      "label": "Repeated primary",
+      "correct_by_conditional_replicate": [
+        58
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        4457.109375
+      ],
+      "comparator": "raw8",
+      "comparator_correct": 56,
+      "comparator_mean_tokens": 15167.828125,
+      "mean_logical_consumed_calls": 2.09375,
+      "comparator_logical_calls": 8.0,
+      "accuracy_gain_ci95_pp": [
+        0.0,
+        7.8125
+      ],
+      "source_record": "parent",
+      "source_sha256": "0159c34133382ed3200343a2366c3023e76746333fb727c02cf851dd9b4193c0",
+      "interval_source_sha256": "f291e801dc1af793a1c1301f8059bfb780e6f3b340eeabd200827f1e227ab147"
+    },
+    {
+      "id": "bbeh_support_raw3",
+      "cohort": "BBEH43",
+      "questions": 43,
+      "policy": "support_switch_v1",
+      "label": "Support switch",
+      "correct_by_conditional_replicate": [
+        16
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        18808.60465116279
+      ],
+      "comparator": "raw3",
+      "comparator_correct": 15,
+      "comparator_mean_tokens": 21173.418604651164,
+      "mean_logical_consumed_calls": 2.511627906976744,
+      "comparator_logical_calls": 3.0,
+      "accuracy_gain_ci95_pp": [
+        0.0,
+        6.976744186046512
+      ],
+      "source_record": "switch",
+      "source_sha256": "f291e801dc1af793a1c1301f8059bfb780e6f3b340eeabd200827f1e227ab147",
+      "interval_source_sha256": "f291e801dc1af793a1c1301f8059bfb780e6f3b340eeabd200827f1e227ab147"
+    },
+    {
+      "id": "bbeh_role_repeat_raw3",
+      "cohort": "BBEH43",
+      "questions": 43,
+      "policy": "role_repeat_adaptive3",
+      "label": "Role-repeat (conditional mean)",
+      "correct_by_conditional_replicate": [
+        17,
+        16
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        20212.20930232558,
+        20179.95348837209
+      ],
+      "comparator": "raw3",
+      "comparator_correct": 15,
+      "comparator_mean_tokens": 21173.418604651164,
+      "mean_logical_consumed_calls": 2.546511627906977,
+      "comparator_logical_calls": 3.0,
+      "accuracy_gain_ci95_pp": [
+        0.0,
+        9.30232558139535
+      ],
+      "source_record": "role",
+      "source_sha256": "b67517c5634bf7c0807203def78b95e315afe7941423202eec3e30f88c351622",
+      "interval_source_sha256": "b67517c5634bf7c0807203def78b95e315afe7941423202eec3e30f88c351622"
+    },
+    {
+      "id": "portfolio_raw3",
+      "cohort": "Full exposed panel171",
+      "questions": 171,
+      "policy": "benchmark_router_v1",
+      "label": "Benchmark portfolio (conditional mean)",
+      "correct_by_conditional_replicate": [
+        120,
+        119
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        10171.099415204679,
+        10162.988304093567
+      ],
+      "comparator": "raw3",
+      "comparator_correct": 116,
+      "comparator_mean_tokens": 11971.573099415205,
+      "mean_logical_consumed_calls": 2.2719298245614037,
+      "comparator_logical_calls": 3.0,
+      "accuracy_gain_ci95_pp": [
+        0.29239766081871343,
+        4.385964912280701
+      ],
+      "source_record": "portfolio",
+      "source_sha256": "7eec8da257d33986e0cc4f377c9ba3db2ac1a8d8e5ed3b66f9aa6d9e238bc0bd",
+      "interval_source_sha256": "7eec8da257d33986e0cc4f377c9ba3db2ac1a8d8e5ed3b66f9aa6d9e238bc0bd"
+    },
+    {
+      "id": "portfolio_raw8",
+      "cohort": "Full exposed panel171",
+      "questions": 171,
+      "policy": "benchmark_router_v1",
+      "label": "Benchmark portfolio (conditional mean)",
+      "correct_by_conditional_replicate": [
+        120,
+        119
+      ],
+      "mean_tokens_by_conditional_replicate": [
+        10171.099415204679,
+        10162.988304093567
+      ],
+      "comparator": "raw8",
+      "comparator_correct": 119,
+      "comparator_mean_tokens": 32662.97076023392,
+      "mean_logical_consumed_calls": 2.2719298245614037,
+      "comparator_logical_calls": 8.0,
+      "accuracy_gain_ci95_pp": [
+        -2.923976608187134,
+        3.508771929824561
+      ],
+      "source_record": "portfolio",
+      "source_sha256": "7eec8da257d33986e0cc4f377c9ba3db2ac1a8d8e5ed3b66f9aa6d9e238bc0bd",
+      "interval_source_sha256": "7eec8da257d33986e0cc4f377c9ba3db2ac1a8d8e5ed3b66f9aa6d9e238bc0bd"
+    }
+  ]
+}
